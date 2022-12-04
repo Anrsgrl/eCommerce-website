@@ -2,10 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 import './header.scss';
 import logo from './logo.png';
-import {FaSearch} from 'react-icons/fa';
-import {FaUser} from 'react-icons/fa';
-import {FaCartPlus} from 'react-icons/fa';
- 
+
 function Header(){
     return(
         <header>
@@ -47,13 +44,12 @@ function Header(){
                     </ul>
                 </div>
                 <div className="header-icons">
-                    <FaSearch/>
-                    <FaUser/>
-                    <FaCartPlus/>
+
                 </div>
             </div>
         </header>
     )
 }
+
 
 export default Header
