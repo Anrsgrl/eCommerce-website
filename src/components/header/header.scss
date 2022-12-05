@@ -1,9 +1,13 @@
 @import '../../mixins';
 
 .scroll-bg{
-    background-color: black;
-    color: white;
-    fill: black;
+    background-color: white;
+}
+.scroll-fill{
+    filter: invert(1);
+}
+.smth{
+    display: none;
 }
 header{
     height: 96px;
@@ -70,6 +74,9 @@ header{
                     a{
                         text-decoration: none;
                         color: #fff;
+                    }
+                    .menu-item-href{
+                        color: black;
                     }
                 }
                 .sub-menu{
