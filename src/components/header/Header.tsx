@@ -1,16 +1,31 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
 import './header.scss';
 import logo from './logo.png';
+import icon1 from '../../assets/images/WhiteSearch.svg'
+import icon2 from '../../assets/images/WhiteAccount.svg'
+import icon3 from '../../assets/images/WhiteCart.svg'
+
 
 function Header(){
+    //color
+    const [color,setColor] = useState(false)
+    const changeColor = () => {
+        if(window.scrollY >= 96){
+            setColor(true)
+        } else {
+            setColor(false)
+        }
+    }
+    window.addEventListener('scroll', changeColor)
+
     return(
-        <header>
+        <header className={color ? 'scroll-bg' : ''}>
             <div className="header-container">
                 <div className="logo-field">
                     <div className="header-logo">
-                        <Link to="/" className='logo-link'>
-                            <img src={logo} alt="Our logo" />
+                        <Link to="/">
+                            <img src={logo} alt="Our logo" className='logo-image img-responsive' />
                         </Link>
                     </div>
                 </div>
@@ -31,25 +46,60 @@ function Header(){
                                 Contact
                             </Link>
                         </li>
+                        <li className='menu-item pages-menu'>
+                            <Link to="/" className='menu-item-href'>
+                                Pages
+                            </Link>
+                            <ul className='sub-menu'>
+                                <li className='sub-item'>
+                                    <Link to="/" className='menu-item-href'>
+                                        Checkout
+                                    </Link>
+                                </li>
+                                <li className='sub-item'>
+                                    <Link to="/" className='menu-item-href'>
+                                        Order Tracking
+                                    </Link>
+                                </li>
+                                <li className='sub-item'>
+                                    <Link to="/" className='menu-item-href'>
+                                        Wishlist
+                                    </Link>
+                                </li>
+                                <li className='sub-item'>
+                                    <Link to="/" className='menu-item-href'>
+                                        Cart
+                                    </Link>
+                                </li>
+                            </ul>
+                        </li>
                         <li className='menu-item'>
                             <Link to="/" className='menu-item-href'>
                                 About
                             </Link>
                         </li>
-                        <li className='menu-item'>
-                            <Link to="/" className='menu-item-href'>
-                                Pages
-                            </Link>
-                        </li>
                     </ul>
                 </div>
                 <div className="header-icons">
-
+                    <div className="icons-element icons-search">
+                        <Link to="/" className='search-btn'>
+                            <img src={icon1} alt="Search" />
+                        </Link>
+                    </div>
+                    <div className="icons-element icons-account">
+                        <Link to="/" className='account-btn'>
+                            <img src={icon2} alt="Account" />
+                        </Link>
+                    </div>
+                    <div className="icons-element icons-cart">
+                        <Link to="/" className='Cart-btn'>
+                            <img src={icon3} alt="Cart" />
+                        </Link>
+                    </div>
                 </div>
             </div>
         </header>
     )
 }
-
 
 export default Header
