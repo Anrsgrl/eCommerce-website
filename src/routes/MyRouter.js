@@ -19,6 +19,7 @@ const MyRouter=()=>{
         <Route path='/product'element={<Product/>}/>
         <Route path='/about' element={<About/>}/>
         <Route path='/cart' element={<Cart/>}/>
+        <Route path='/testpage' element={<TestPage/>}/>
         <Route path='/contact' element={<Contact/>}/>
         <Route path='/orderTracking' element={<OrderTracking/>}/>
         <Route path='/wishlist' element={<Whishlist/>}/>
