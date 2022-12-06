@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import './about.scss';
 
 export default function About() {
@@ -6,5 +6,5 @@ export default function About() {
         <div>
             <h1>ABout page</h1>
         </div>
-    )
+    );
 }

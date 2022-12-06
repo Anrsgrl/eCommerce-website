@@ -1,8 +1,6 @@
-import React from 'react'
-function Header(){
-    return(
-        <h1>Bura Headerdi</h1>
-    )
+import React from 'react';
+function Header() {
+  return <h1>Bura Headerdi</h1>;
 }
 
-export default Header
+export default Header;
