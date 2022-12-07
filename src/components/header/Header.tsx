@@ -106,20 +106,16 @@ function Header() {
             </ul>
           </div>
           <div className="header-icons">
-            <button className="icons-element icons-search">
-              <Link to="/" className="search-btn">
-                <img src={icon1} alt="Search" className={linkIconClassName} />
-              </Link>
+            <button className="icons-element icons-search search-btn">
+              <img src={icon1} alt="Search" className={linkIconClassName} />
             </button>
             <button className="icons-element icons-account">
               <Link to="/" className="account-btn">
                 <img src={icon2} alt="Account" className={linkIconClassName} />
               </Link>
             </button>
-            <button className="icons-element icons-cart">
-              <Link to="/" className="Cart-btn">
-                <img src={icon3} alt="Cart" className={linkIconClassName} />
-              </Link>
+            <button className="icons-element icons-cart Cart-btn">
+              <img src={icon3} alt="Cart" className={linkIconClassName} />
             </button>
           </div>
         </div>
@@ -139,13 +135,13 @@ function Header() {
             <div className="mobile-navigation default-nav-menu">
               <ul>
                 <li>
-                  <Link to="/">Home</Link>
+                  <Link to="/home">Home</Link>
                 </li>
                 <li>
-                  <Link to="/">Shop</Link>
+                  <Link to="/shop">Shop</Link>
                 </li>
                 <li>
-                  <Link to="/">Contact</Link>
+                  <Link to="/contact">Contact</Link>
                 </li>
                 <li>
                   <button className="pages-part" onClick={() => setToggle(!toggle)}>
@@ -159,16 +155,16 @@ function Header() {
                   {toggle && (
                     <ul className="sub-menu">
                       <li>
-                        <Link to="/">Checkout</Link>
+                        <Link to="/checkout">Checkout</Link>
                       </li>
                       <li>
-                        <Link to="/">Order Tracking</Link>
+                        <Link to="/ordertracking">Order Tracking</Link>
                       </li>
                       <li>
-                        <Link to="/">Wishlist</Link>
+                        <Link to="/wishlist">Wishlist</Link>
                       </li>
                       <li>
-                        <Link to="/">Cart</Link>
+                        <Link to="/cart">Cart</Link>
                       </li>
                     </ul>
                   )}
