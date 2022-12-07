@@ -1,5 +1,3 @@
-/* eslint-disable jsx-a11y/no-static-element-interactions */
-/* eslint-disable react/jsx-no-comment-textnodes */
 import './header.scss';
 import { Link } from 'react-router-dom';
 import React, { useState } from 'react';
@@ -11,7 +9,7 @@ import logo from '../../assets/images/WhiteLogo.svg';
 import rightArrow from '../../assets/images/rightArrow.svg';
 import x from '../../assets/images/Xblack.svg';
 
-function Header(this: any) {
+function Header() {
   //color
   const [color, setColor] = useState(false);
   const changeColor = () => {
@@ -30,6 +28,9 @@ function Header(this: any) {
     setOpen(false);
   };
   const [toggle, setToggle] = useState(false);
+
+  const linkClassName = color ? 'menu-item-href' : '';
+  const linkIconClassName = color ? 'scroll-fill' : '';
 
   return (
     <>
@@ -56,22 +57,22 @@ function Header(this: any) {
           <div className="header-navbar">
             <ul className="navbar-menu">
               <li className="menu-item">
-                <Link to="/" className={color ? 'menu-item-href' : ''}>
+                <Link to="/" className={linkClassName}>
                   Home
                 </Link>
               </li>
               <li className="menu-item">
-                <Link to="/shop" className={color ? 'menu-item-href' : ''}>
+                <Link to="/shop" className={linkClassName}>
                   Shop
                 </Link>
               </li>
               <li className="menu-item">
-                <Link to="/contact" className={color ? 'menu-item-href' : ''}>
+                <Link to="/contact" className={linkClassName}>
                   Contact
                 </Link>
               </li>
               <li className="menu-item pages-menu">
-                <Link to="/" className={color ? 'menu-item-href' : ''}>
+                <Link to="/" className={linkClassName}>
                   Pages
                 </Link>
                 <ul className="sub-menu">
@@ -98,7 +99,7 @@ function Header(this: any) {
                 </ul>
               </li>
               <li className="menu-item">
-                <Link to="/about" className={color ? 'menu-item-href' : ''}>
+                <Link to="/about" className={linkClassName}>
                   About
                 </Link>
               </li>
@@ -107,17 +108,17 @@ function Header(this: any) {
           <div className="header-icons">
             <button className="icons-element icons-search">
               <Link to="/" className="search-btn">
-                <img src={icon1} alt="Search" className={color ? 'scroll-fill' : ''} />
+                <img src={icon1} alt="Search" className={linkIconClassName} />
               </Link>
             </button>
             <button className="icons-element icons-account">
               <Link to="/" className="account-btn">
-                <img src={icon2} alt="Account" className={color ? 'scroll-fill' : ''} />
+                <img src={icon2} alt="Account" className={linkIconClassName} />
               </Link>
             </button>
             <button className="icons-element icons-cart">
               <Link to="/" className="Cart-btn">
-                <img src={icon3} alt="Cart" className={color ? 'scroll-fill' : ''} />
+                <img src={icon3} alt="Cart" className={linkIconClassName} />
               </Link>
             </button>
           </div>
@@ -173,7 +174,7 @@ function Header(this: any) {
                   )}
                 </li>
                 <li>
-                  <Link to="/">About</Link> 
+                  <Link to="/">About</Link>
                 </li>
               </ul>
             </div>

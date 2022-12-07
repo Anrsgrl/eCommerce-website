@@ -1,12 +1,9 @@
 import './home.scss';
-import Footer from '../../components/footer/Footer';
-import Header from '../../components/header/Header';
 import React from 'react';
 
 export default function Home() {
   return (
     <>
-      <Header />
       <div className="bg"></div>
       <div className="bg"></div>
       <div className="blank">
@@ -16,7 +13,6 @@ export default function Home() {
         nihil expedita, perspiciatis quam! Quisquam velit ipsum dicta similique saepe maiores sapiente nihil
         laboriosam quibusdam, error alias, dignissimos culpa!Lorem
       </div>
-      <Footer />
     </>
   );
 }
