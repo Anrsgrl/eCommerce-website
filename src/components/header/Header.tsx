@@ -37,7 +37,7 @@ function Header(this: any) {
         <div className="header-container">
           <div className="hamburger-menu">
             <Link to="/">
-              <button className='hamburger-button' onClick={openSide}>
+              <button className="hamburger-button" onClick={openSide}>
                 <img src={hamburger} alt="hamburger" />
               </button>
             </Link>
@@ -128,7 +128,7 @@ function Header(this: any) {
           <div className="mobile-header-screen-inner">
             <div className="mobile-header-title">
               <h3>Menu</h3>
-              <button className='x-button' onClick={closeSide}>
+              <button className="x-button" onClick={closeSide}>
                 <span className="sidebar-button-text">
                   <img src={x} alt="x" className="button-x" />
                   <span className="button-title">Close</span>
@@ -173,7 +173,7 @@ function Header(this: any) {
                   )}
                 </li>
                 <li>
-                  <Link to="/">About</Link>
+                  <Link to="/">About</Link> 
                 </li>
               </ul>
             </div>

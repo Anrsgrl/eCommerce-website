@@ -338,6 +338,9 @@ aside{
                             color: #0d0707;
                             text-decoration: none;
                             background-color: transparent;
+                            &:hover{
+                                color: #2dbbf0;
+                            }
                         }
                     }
                 }
