@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 function Footer(){
     return (
@@ -6,6 +6,6 @@ function Footer(){
           <h1> Bura Footerdu</h1>
         </div>
     )
-}
+};
 
-export default Footer
+export default Footer;

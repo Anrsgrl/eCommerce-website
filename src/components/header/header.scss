@@ -9,6 +9,9 @@
 .smth{
     display: none;
 }
+button{
+    @include buttonstyle;
+}
 header{
     height: 96px;
     display: flex;
@@ -41,6 +44,9 @@ header{
                 width: 20px;
                 position: relative;
                 display: block;
+                &:hover{
+                    color: #2dbbf0;
+                }
                 img{
                     width: 20px;
                     height: 20px;
@@ -265,7 +271,7 @@ aside{
                     font-weight: 500;
                     margin: 0;
                 }
-                button{
+                .x-button{
                     position: static;
                     right: 15px;
                     top: 15px;
