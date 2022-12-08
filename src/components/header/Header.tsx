@@ -122,6 +122,6 @@ function Header() {
 }
 // how to click outside box react
 // https://codepen.io/sosuke/pen/Pjoqqp
-// close hover when click
+// close hover when clicktt config 
 
 export default Header;
