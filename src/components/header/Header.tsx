@@ -2,22 +2,22 @@ import './header.scss';
 import { Link } from 'react-router-dom';
 import HeaderMenu from '../HeaderMenu/HeaderMenu';
 import React, { useState } from 'react';
-import hamburger from '../../assets/images/hamburgerMenu.svg';
 import icon1 from '../../assets/images/WhiteSearch.svg';
 import icon2 from '../../assets/images/WhiteAccount.svg';
 import icon3 from '../../assets/images/WhiteCart.svg';
 import logo from '../../assets/images/WhiteLogo.svg';
+import hamburger from '../../assets/images/hamburgerMenu.svg';
 
 function Header() {
-  const [sidebar, setOpen] = useState(false);
-  const openSide = () => {
-    setOpen(true);
-  };
-  const closeSide = () => {
-    setOpen(false);
-  };
   //color
   const [color, setColor] = useState(false);
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+  const handleOpenDrawer = () => {
+    setIsDrawerOpen(true);
+  };
+  const handleCloseDrawer = () => {
+    setIsDrawerOpen(false);
+  };
   const changeColor = () => {
     if (window.scrollY >= 96) {
       setColor(true);
@@ -35,7 +35,7 @@ function Header() {
       <header className={color ? 'scroll-bg mobile' : ' mobile'}>
         <div className="header-container">
           <div className="hamburger-menu">
-            <button className="hamburger-button" onClick={openSide}>
+            <button className="hamburger-button" onClick={handleOpenDrawer}>
               <img src={hamburger} alt="hamburger" />
             </button>
           </div>
@@ -116,9 +116,12 @@ function Header() {
           </div>
         </div>
       </header>
-      <HeaderMenu />
+      <HeaderMenu isOpen={isDrawerOpen} handleClose={handleCloseDrawer}/>
     </>
   );
 }
+// how to click outside box react
+// https://codepen.io/sosuke/pen/Pjoqqp
+// close hover when click
 
 export default Header;

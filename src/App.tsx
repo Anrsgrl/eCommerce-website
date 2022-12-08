@@ -5,7 +5,7 @@ import Cart from './pages/cart/Cart';
 import CheckOut from './pages/checkout/CheckOut';
 import Contact from './pages/contact/Contact';
 import Footer from './components/Footer/Footer';
-import Header from './components/Header/Header';
+import Header from './components/Header/header';
 import HeaderMenu from './components/HeaderMenu/HeaderMenu';
 import Home from './pages/home/Home';
 import OrderTracking from './pages/order/OrderTracking';
@@ -19,7 +19,6 @@ function App() {
   return (
     <>
       <Header />
-      <HeaderMenu />
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
