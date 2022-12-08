@@ -1,15 +1,21 @@
 import './header.scss';
 import { Link } from 'react-router-dom';
+import HeaderMenu from '../HeaderMenu/HeaderMenu';
 import React, { useState } from 'react';
 import hamburger from '../../assets/images/hamburgerMenu.svg';
 import icon1 from '../../assets/images/WhiteSearch.svg';
 import icon2 from '../../assets/images/WhiteAccount.svg';
 import icon3 from '../../assets/images/WhiteCart.svg';
 import logo from '../../assets/images/WhiteLogo.svg';
-import rightArrow from '../../assets/images/rightArrow.svg';
-import x from '../../assets/images/Xblack.svg';
 
 function Header() {
+  const [sidebar, setOpen] = useState(false);
+  const openSide = () => {
+    setOpen(true);
+  };
+  const closeSide = () => {
+    setOpen(false);
+  };
   //color
   const [color, setColor] = useState(false);
   const changeColor = () => {
@@ -20,14 +26,6 @@ function Header() {
     }
   };
   window.addEventListener('scroll', changeColor);
-  const [sidebar, setOpen] = useState(false);
-  const openSide = () => {
-    setOpen(true);
-  };
-  const closeSide = () => {
-    setOpen(false);
-  };
-  const [toggle, setToggle] = useState(false);
 
   const linkClassName = color ? 'menu-item-href' : '';
   const linkIconClassName = color ? 'scroll-fill' : '';
@@ -37,11 +35,9 @@ function Header() {
       <header className={color ? 'scroll-bg mobile' : ' mobile'}>
         <div className="header-container">
           <div className="hamburger-menu">
-            <Link to="/">
-              <button className="hamburger-button" onClick={openSide}>
-                <img src={hamburger} alt="hamburger" />
-              </button>
-            </Link>
+            <button className="hamburger-button" onClick={openSide}>
+              <img src={hamburger} alt="hamburger" />
+            </button>
           </div>
           <div className="logo-field">
             <div className="header-logo">
@@ -120,63 +116,7 @@ function Header() {
           </div>
         </div>
       </header>
-      <aside className={sidebar ? 'canvas-normal is-open' : 'canvas-normal'}>
-        <div className="offcanvas-content">
-          <div className="mobile-header-screen-inner">
-            <div className="mobile-header-title">
-              <h3>Menu</h3>
-              <button className="x-button" onClick={closeSide}>
-                <span className="sidebar-button-text">
-                  <img src={x} alt="x" className="button-x" />
-                  <span className="button-title">Close</span>
-                </span>
-              </button>
-            </div>
-            <div className="mobile-navigation default-nav-menu">
-              <ul>
-                <li>
-                  <Link to="/home">Home</Link>
-                </li>
-                <li>
-                  <Link to="/shop">Shop</Link>
-                </li>
-                <li>
-                  <Link to="/contact">Contact</Link>
-                </li>
-                <li>
-                  <button className="pages-part" onClick={() => setToggle(!toggle)}>
-                    <Link to="/">Pages</Link>
-                    <Link to="/">
-                      <span className={toggle ? 'toggle-icon flip' : 'toggle-icon'}>
-                        <img src={rightArrow} alt="right" />
-                      </span>
-                    </Link>
-                  </button>
-                  {toggle && (
-                    <ul className="sub-menu">
-                      <li>
-                        <Link to="/checkout">Checkout</Link>
-                      </li>
-                      <li>
-                        <Link to="/ordertracking">Order Tracking</Link>
-                      </li>
-                      <li>
-                        <Link to="/wishlist">Wishlist</Link>
-                      </li>
-                      <li>
-                        <Link to="/cart">Cart</Link>
-                      </li>
-                    </ul>
-                  )}
-                </li>
-                <li>
-                  <Link to="/">About</Link>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </aside>
+      <HeaderMenu />
     </>
   );
 }
