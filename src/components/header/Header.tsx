@@ -2,11 +2,11 @@ import './header.scss';
 import { Link } from 'react-router-dom';
 import HeaderMenu from '../HeaderMenu/HeaderMenu';
 import React, { useState } from 'react';
+import hamburger from '../../assets/images/hamburgerMenu.svg';
 import icon1 from '../../assets/images/WhiteSearch.svg';
 import icon2 from '../../assets/images/WhiteAccount.svg';
 import icon3 from '../../assets/images/WhiteCart.svg';
 import logo from '../../assets/images/WhiteLogo.svg';
-import hamburger from '../../assets/images/hamburgerMenu.svg';
 
 function Header() {
   //color
@@ -116,12 +116,12 @@ function Header() {
           </div>
         </div>
       </header>
-      <HeaderMenu isOpen={isDrawerOpen} handleClose={handleCloseDrawer}/>
+      <HeaderMenu isOpen={isDrawerOpen} handleClose={handleCloseDrawer} />
     </>
   );
 }
 // how to click outside box react
 // https://codepen.io/sosuke/pen/Pjoqqp
-// close hover when clicktt config 
+// close hover when clicktt config
 
 export default Header;
