@@ -27,6 +27,18 @@ function Header() {
   };
   window.addEventListener('scroll', changeColor);
 
+  //close clickoutside
+
+  // const closeMenu = () => setIsDrawerOpen(false);
+
+  //   useEffect(() => {
+  //     document.body.addEventListener('click', closeMenu);
+
+  //     return function cleanup() {
+  //         window.removeEventListener('click', closeMenu );
+  //     };
+  // },[]);
+
   const linkClassName = color ? 'menu-item-href' : '';
   const linkIconClassName = color ? 'scroll-fill' : '';
 
@@ -36,7 +48,7 @@ function Header() {
         <div className="header-container">
           <div className="hamburger-menu">
             <button className="hamburger-button" onClick={handleOpenDrawer}>
-              <img src={hamburger} alt="hamburger" />
+              <img src={hamburger} alt="hamburger" className="formobileicon" />
             </button>
           </div>
           <div className="logo-field">
@@ -102,7 +114,7 @@ function Header() {
             </ul>
           </div>
           <div className="header-icons">
-            <button className="icons-element icons-search search-btn">
+            <button className="icons-element icons-search search-btn formobileicon">
               <img src={icon1} alt="Search" className={linkIconClassName} />
             </button>
             <button className="icons-element icons-account">
@@ -110,7 +122,7 @@ function Header() {
                 <img src={icon2} alt="Account" className={linkIconClassName} />
               </Link>
             </button>
-            <button className="icons-element icons-cart Cart-btn">
+            <button className="icons-element icons-cart Cart-btn formobileicon">
               <img src={icon3} alt="Cart" className={linkIconClassName} />
             </button>
           </div>
@@ -120,8 +132,5 @@ function Header() {
     </>
   );
 }
-// how to click outside box react
-// https://codepen.io/sosuke/pen/Pjoqqp
-// close hover when clicktt config
 
 export default Header;

@@ -21,7 +21,7 @@ function HeaderMenu(props: IProps) {
             <h3>Menu</h3>
             <button className="x-button" onClick={handleClose}>
               <span className="sidebar-button-text">
-                <img src={x} alt="x" className="button-x" />
+                <img src={x} alt="x" className="button-x formobileicon" />
                 <span className="button-title">Close</span>
               </span>
             </button>

@@ -1,4 +1,5 @@
 @import '../../mixins';
+@import '../../variables';
 
 .scroll-bg{
     background-color: white;
@@ -33,6 +34,26 @@ header{
         max-width: 100%;
         padding-left: 23px;
         padding-right: 36px;
+        .hamburger-menu{
+            display: none;
+            a{
+                font-size: 11px;
+                font-weight: 700;
+                text-transform: uppercase;
+                line-height: 15px;
+                height: 20px;
+                width: 20px;
+                position: relative;
+                display: block;
+                &:hover{
+                    color: $main-blue;
+                }
+                img{
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+        }
         .logo-field{
             display: flex;
             width: 100px;
@@ -76,10 +97,10 @@ header{
                     }
                     a{
                         text-decoration: none;
-                        color: #fff;
+                        color: $white;
                     }
                     .menu-item-href{
-                        color: black;
+                        color: $black;
                     }
                 }
                 .sub-menu{
@@ -89,7 +110,7 @@ header{
                     top: 100%;
                     left: 0;
                     min-width: 200px;
-                    background-color: #fff;
+                    background-color: $white;
                     text-align: left;
                     padding: 20px 5px;
                     z-index: 9999;
@@ -149,13 +170,13 @@ header{
                     box-shadow: 7px 6px 40px 0px rgb(204 204 223 / 16%);
                 }
                 .sub-item a:hover {
-                    color: #2dbbf0 !important;
+                    color: $main-blue !important;
                     text-decoration: none;
                 }
             }
         }
         .header-icons{
-            color: white;
+            color: $white;
             display: flex;
             gap: 20px;
             .icons-element{
@@ -174,7 +195,7 @@ header{
 @media (max-width: 1024px){
     header{
         height: 60px;
-        background-color: white !important;
+        background-color: $white !important;
     }
     .hamburger-menu{
         display: block !important;
@@ -198,11 +219,10 @@ header{
     .icons-account{
         display: none;
     }
+    .formobileicon:hover{
+        filter: invert(69%) sepia(24%) saturate(4130%) hue-rotate(162deg) brightness(98%) contrast(91%);
+    }
 }
 
-.is-open{
-    transform: translate3d(0,0,0);
-    visibility: visible;
-    opacity: 1;
-}
+
 
