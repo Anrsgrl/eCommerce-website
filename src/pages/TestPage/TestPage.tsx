@@ -20,4 +20,4 @@ export default function TestPage() {
       <button onClick={loadUserHandler}>Load user's data</button>
     </>
   );
-};
+}
