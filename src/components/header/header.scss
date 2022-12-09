@@ -196,6 +196,7 @@ header{
     header{
         height: 60px;
         background-color: $white !important;
+        position: relative;
     }
     .hamburger-menu{
         display: block !important;
@@ -223,6 +224,12 @@ header{
         filter: invert(69%) sepia(24%) saturate(4130%) hue-rotate(162deg) brightness(98%) contrast(91%);
     }
 }
+@media( max-width: 767px){
+    header{
+        position: relative;;
+    }
+}
+
 
 
 
