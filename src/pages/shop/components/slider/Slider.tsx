@@ -24,37 +24,36 @@ export default function Slider() {
         pagination={{
           clickable: true,
         }}
-        breakpoints= {{
+        breakpoints={{
           // when window width is >= 575px
-          0:{
+          0: {
             slidesPerView: 3,
             spaceBetween: 40,
-           }
-          ,
-          575:{
+          },
+          575: {
             slidesPerView: 3,
-            spaceBetween: 40
+            spaceBetween: 40,
           },
           // when window width is >= 768px
-          768: {              
+          768: {
             slidesPerView: 4,
-            spaceBetween: 20
+            spaceBetween: 20,
           },
           // when window width is >= 992px
           992: {
             slidesPerView: 5,
-            spaceBetween: 20
-          }, 
-           // when window width is >= 1024px
+            spaceBetween: 20,
+          },
+          // when window width is >= 1024px
           1024: {
             slidesPerView: 5,
-            spaceBetween: 12
+            spaceBetween: 12,
           },
-           // when window width is >= 1024px
+          // when window width is >= 1024px
           1200: {
             slidesPerView: 5,
-            spaceBetween: 10
-          }
+            spaceBetween: 10,
+          },
         }}
         loop={true}
         navigation={true}
@@ -63,7 +62,7 @@ export default function Slider() {
       >
         <SwiperSlide>
           <div className="slide-content">
-            <img  src={img1} alt="" />
+            <img src={img1} alt="" />
             <h6>Accessories</h6>
           </div>
         </SwiperSlide>
