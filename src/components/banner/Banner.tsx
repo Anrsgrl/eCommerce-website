@@ -1,4 +1,5 @@
 import '../banner/banner.scss';
+// import { ChevronRight } from 'react-bootstrap-icons';
 import { ChevronRight } from 'react-bootstrap-icons';
 import { Link } from 'react-router-dom';
 import React from 'react';
@@ -25,10 +26,8 @@ export default function Banner(props: IElement) {
         </Link>
         <p className="pagename">{pageName}</p>
       </div>
-      
-      {sliderExist ?
-       <Slider /> : <></>
-       } 
+
+      {sliderExist ? <Slider /> : <></>}
     </section>
   );
 }
