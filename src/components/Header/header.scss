@@ -1,5 +1,5 @@
-@import '../../mixins';
-@import '../../variables';
+@import '../../vendors/mixins';
+@import '../../vendors/variables';
 
 .scroll-bg{
     background-color: white;
@@ -23,8 +23,8 @@ header{
     position: fixed;
     left: 0;
     top: 0;
-    transition: 0.6s;
     background-color: rgba(255,255,255,0);
+   
     .header-container{
         display: flex;
         align-items: center;
@@ -36,6 +36,7 @@ header{
         padding-right: 36px;
         .hamburger-menu{
             display: none;
+            width: 60px;
             a{
                 font-size: 11px;
                 font-weight: 700;
@@ -196,6 +197,7 @@ header{
     header{
         height: 60px;
         background-color: $white !important;
+        position: relative;
     }
     .hamburger-menu{
         display: block !important;
@@ -223,6 +225,12 @@ header{
         filter: invert(69%) sepia(24%) saturate(4130%) hue-rotate(162deg) brightness(98%) contrast(91%);
     }
 }
+@media( max-width: 767px){
+    header{
+        position: relative;;
+    }
+}
+
 
 
 

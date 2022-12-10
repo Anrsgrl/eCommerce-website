@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 import './App.css';
 import React from 'react';
+=======
+import './App.scss';
+>>>>>>> ea501725dd910127cb436453b5347206c3316a6d
 import { Route, Routes } from 'react-router-dom';
 import About from './pages/about/About';
 import Cart from './pages/cart/Cart';
@@ -11,8 +15,8 @@ import Product from './pages/product/Product';
 import Shop from './pages/shop/Shop';
 import TestPage from './pages/TestPage/TestPage';
 import Whishlist from './pages/wishlist/Whishlist';
-import Header from './components/header/Header';
-import Footer from './components/footer/Footer';
+import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
 
 
 function App() {
