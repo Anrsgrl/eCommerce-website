@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-import './App.css';
-import React from 'react';
-=======
 import './App.scss';
->>>>>>> ea501725dd910127cb436453b5347206c3316a6d
+import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import About from './pages/about/About';
 import Cart from './pages/cart/Cart';
