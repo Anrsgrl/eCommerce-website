@@ -38,7 +38,7 @@ function HeaderMenu(props: IProps) {
                 <Link to="/contact">Contact</Link>
               </li>
               <li>
-                <button className="pages-part" onClick={() => setToggle(!toggle)}>
+                <button className="pages-part pages-button" onClick={() => setToggle(!toggle)}>
                   <Link to="/">Pages</Link>
                   <Link to="/">
                     <span className={toggle ? 'toggle-icon flip' : 'toggle-icon'}>
