@@ -1,9 +1,9 @@
+import React from 'react';
 
 import "./contact.scss";
 import logo from './logo.png';
 import email from './email.png';
 import location from './location.png';
-import React from "react";
 
 
 export default function Contact() {
