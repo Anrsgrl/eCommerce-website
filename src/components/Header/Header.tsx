@@ -47,7 +47,7 @@ function Header() {
       <header className={color ? 'scroll-bg mobile' : ' mobile'}>
         <div className="header-container">
           <div className="hamburger-menu">
-            <button className="hamburger-button" onClick={handleOpenDrawer}>
+            <button className="hamburger-button header-button" onClick={handleOpenDrawer}>
               <img src={hamburger} alt="hamburger" className="formobileicon" />
             </button>
           </div>
@@ -114,15 +114,15 @@ function Header() {
             </ul>
           </div>
           <div className="header-icons">
-            <button className="icons-element icons-search search-btn formobileicon">
+            <button className="icons-element icons-search search-btn formobileicon header-button">
               <img src={icon1} alt="Search" className={linkIconClassName} />
             </button>
-            <button className="icons-element icons-account">
+            <button className="icons-element icons-account header-button">
               <Link to="/" className="account-btn">
                 <img src={icon2} alt="Account" className={linkIconClassName} />
               </Link>
             </button>
-            <button className="icons-element icons-cart Cart-btn formobileicon">
+            <button className="icons-element icons-cart Cart-btn formobileicon header-button">
               <img src={icon3} alt="Cart" className={linkIconClassName} />
             </button>
           </div>
