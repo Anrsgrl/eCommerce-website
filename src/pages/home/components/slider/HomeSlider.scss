@@ -1,52 +1,64 @@
 @import '../../../../vendors/variables';
 @import '../../../../vendors/mixins';
-.home-slider-container{
-    height: 100%;
-    max-width: 1470px;
-    margin: 0 auto;
-    padding-left: 23px;
-    padding-right: 36px;
-    .hslider-buttons{
-        display: flex;
-        gap: 10px;
-        position: absolute;
-        bottom: 0;
-        margin-left: 5px;
-        margin-bottom: 65px;
-        z-index: 2;
-        @media(max-width: 1024px) {
-        position: absolute;
-        bottom: 0;
-        margin-left: 3px;
-        margin-bottom: 33px;
-        z-index: 2;
-        }
-        .hslider-button{
-            border: 0;
-            width: 39px;
-            height: 39px;
-            font-size: 9px;
-            color: #000;
-            background-color: #fff;
-            border-radius: 50%;
-            cursor: pointer;
-            @media(max-width: 767px) {
-                margin-left: 2%;
-                margin-bottom: -2%;
+
+.home-slider-field{
+    width: 100%;
+    height: 100vh;
+    background-color: #974C35;
+    overflow: hidden;
+    @media( max-width: 767px){
+        max-width: 750px;
+        height: 350px;
+        position: relative;
+        overflow: hidden;
+    }
+    .home-slider-container{
+        height: 100%;
+        max-width: 1470px;
+        margin: 0 auto;
+        padding-left: 23px;
+        padding-right: 36px;
+        .hslider-buttons{
+            display: flex;
+            gap: 10px;
+            position: absolute;
+            bottom: 0;
+            margin-left: 5px;
+            margin-bottom: 65px;
+            z-index: 2;
+            @media(max-width: 1024px) {
+            position: absolute;
+            bottom: 0;
+            margin-left: 3px;
+            margin-bottom: 33px;
+            z-index: 2;
             }
-            &:hover{
-                background-color: black;
+            .hslider-button{
+                border: 0;
+                width: 39px;
+                height: 39px;
+                font-size: 9px;
+                color: #000;
+                background-color: #fff;
+                border-radius: 50%;
+                cursor: pointer;
+                @media(max-width: 767px) {
+                    margin-left: 2%;
+                    margin-bottom: -2%;
+                }
+                &:hover{
+                    background-color: black;
+                    svg{
+                        fill: white;
+                    }
+                }
                 svg{
-                    fill: white;
+                    width: 1.5em;
+                    height: 4em;
+                    fill: black;
                 }
             }
-            svg{
-                width: 1.5em;
-                height: 4em;
-                fill: black;
-            }
         }
-    }
         .hslider-part{
             display: flex;
             align-items: center;
@@ -141,4 +153,5 @@
                 }
             }
         }
+    }
 }

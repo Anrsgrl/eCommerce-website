@@ -5,9 +5,7 @@ import React from 'react';
 export default function Home() {
   return (
     <>
-      <div className="home-slider-field">
-        <HomeSlider />
-      </div>
+      <HomeSlider />
       <div className="bg"></div>
       <div className="bg"></div>
     </>
