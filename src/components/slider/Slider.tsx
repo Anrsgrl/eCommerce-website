@@ -1,10 +1,5 @@
-import React from 'react'
+import React from 'react';
 
 export default function Slider() {
-    return (
-        <div>
-            Slider
-            
-        </div>
-    )
+  return <div>Slider</div>;
 }

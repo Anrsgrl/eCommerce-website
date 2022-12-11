@@ -1,7 +1,5 @@
-import React from 'react'
+import React from 'react';
 
 export default function OrderTracking() {
-  return (
-    <div>OrderTracking</div>
-  )
+  return <div>OrderTracking</div>;
 }
