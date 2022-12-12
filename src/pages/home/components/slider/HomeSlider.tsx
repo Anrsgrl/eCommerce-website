@@ -6,17 +6,27 @@ import { useState } from 'react';
 import homeImg1 from '../../../../assets/images/homeImg1.png';
 import homeImg2 from '../../../../assets/images/homeImg2.png';
 
-const images = [homeImg1, homeImg2];
-const heading = ['Robot born to naturally integrated', 'Premium accessories collection 18'];
-const content = [
-  'The replaceable skin with different colors and patterns available makes it suit all kinds of house designs',
-  'The replaceable skin with different colors and patterns available makes it suit all kinds of house designss',
+interface IItems {
+  images: string;
+  heading: string;
+  content: string;
+}
+
+const items: IItems[] = [
+  {
+    images: homeImg1,
+    heading: 'Robot born to naturally integrated',
+    content:
+      'The replaceable skin with different colors and patterns available makes it suit all kinds of house designs',
+  },
+  {
+    images: homeImg2,
+    heading: 'Premium accessories collection 18',
+    content:
+      'The replaceable skin with different colors and patterns available makes it suit all kinds of house designs',
+  },
 ];
 
-// interface IProps {
-//   index: number;
-//   setIndex: () => void;
-// }
 const variants = {
   change: { backgroundColor: '#84A594' },
   notchange: { backgroundColor: '#974C35' },
@@ -27,20 +37,20 @@ export default function HomeSlider() {
 
   function prevStep() {
     if (index === 0) {
-      setIndex(images.length - 1);
+      setIndex(items.length - 1);
       return;
     }
     setIndex(index - 1);
   }
 
   function nextStep() {
-    if (index === images.length - 1) {
+    if (index === items.length - 1) {
       setIndex(0);
       return;
     }
     setIndex(index + 1);
   }
-  
+
   return (
     <>
       <motion.div
@@ -52,7 +62,7 @@ export default function HomeSlider() {
         transition={{
           duration: 1,
         }}
-        key={images[index]}
+        key={items[index].images}
         variants={variants}
       >
         <div className="home-slider-container">
@@ -80,9 +90,9 @@ export default function HomeSlider() {
               transition={{
                 duration: 2,
               }}
-              key={images[index]}
+              key={items[index].images}
             >
-              <img src={images[index]} alt="" />
+              <img src={items[index].images} alt="" />
             </motion.div>
             <div className="hslider-content">
               <motion.p
@@ -98,9 +108,9 @@ export default function HomeSlider() {
                 transition={{
                   duration: 2.2,
                 }}
-                key={heading[index]}
+                key={items[index].heading}
               >
-                {heading[index]}
+                {items[index].heading}
               </motion.p>
               <motion.p
                 className="hslider-p2"
@@ -117,9 +127,9 @@ export default function HomeSlider() {
                 transition={{
                   duration: 2.6,
                 }}
-                key={content[index]}
+                key={items[index].content}
               >
-                {content[index]}
+                {items[index].content}
               </motion.p>
               <motion.button
                 className="hslider-button"
@@ -134,7 +144,7 @@ export default function HomeSlider() {
                 transition={{
                   duration: 2.5,
                 }}
-                key={images[index]}
+                key={items[index].images}
               >
                 <Link to={'/shop'}>SHOP NOW</Link>
               </motion.button>
