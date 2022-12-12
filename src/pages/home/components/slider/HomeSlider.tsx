@@ -3,8 +3,8 @@ import { AiOutlineLeft, AiOutlineRight } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useState } from 'react';
-import homeImg1 from '../../../../assets/images/homeImg1.png';
-import homeImg2 from '../../../../assets/images/homeImg2.png';
+import homeImg1 from '../../../../assets/images/homeImg1.jpeg';
+import homeImg2 from '../../../../assets/images/homeImg2.jpeg';
 
 interface IItems {
   images: string;
