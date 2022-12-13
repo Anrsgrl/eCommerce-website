@@ -1,0 +1,15 @@
+.DailyEssentialsField{
+    width: 1903px;
+    height: 670px;
+    margin-top: 35px;
+    margin-bottom: 0;
+    padding: 0 15px;
+    display: flex;
+    .DailyEssentialsContainer{
+        max-width: 1440px;
+        margin: 0 auto;
+        .DailyEssentialsItems{
+            display: flex;
+        }
+    }
+}
