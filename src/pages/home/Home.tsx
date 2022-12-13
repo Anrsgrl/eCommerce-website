@@ -1,5 +1,5 @@
 import './home.scss';
-import HomeSlider from './components/slider/HomeSlider';
+import HomeSlider from './components/HomeSlider/HomeSlider';
 import React from 'react';
 
 export default function Home() {
