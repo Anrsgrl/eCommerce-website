@@ -10,7 +10,7 @@
 .smth{
     display: none;
 }
-button{
+.header-button{
     @include buttonstyle;
 }
 header{
@@ -24,7 +24,6 @@ header{
     left: 0;
     top: 0;
     background-color: rgba(255,255,255,0);
-   
     .header-container{
         display: flex;
         align-items: center;
@@ -32,8 +31,7 @@ header{
         height: inherit;
         margin: 0 auto;
         max-width: 100%;
-        padding-left: 23px;
-        padding-right: 36px;
+        padding: 0 30px;
         .hamburger-menu{
             display: none;
             width: 60px;

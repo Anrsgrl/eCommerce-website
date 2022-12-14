@@ -1,4 +1,5 @@
 @import '../../vendors/variables';
+@import '../../vendors/mixins';
 
 .hamburger-menu{
     display: none;
@@ -128,6 +129,9 @@ aside{
                         display: flex;
                         align-items: center;
                         justify-content: space-between;
+                    }
+                    .pages-button{
+                        @include buttonstyle;
                     }
                     li{
                         line-height: 24px;
