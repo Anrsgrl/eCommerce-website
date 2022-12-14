@@ -13,7 +13,7 @@ function DailyEssentialsItem() {
   return (
     <div className="DailyEssentialsItem">
       <img src={daily1} alt="daily1" />
-      <div className="DailyEssentialsItemContent">
+      <div className="DailyEssentials-Item-Content">
         <div className="DailyProductContent">
           <p className="DailyProductName">Backpacks</p>
           <p className="DailyProductTitle">Daily Essentials</p>
