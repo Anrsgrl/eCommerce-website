@@ -1,4 +1,4 @@
-import './footer.scss';
+import './Footer.scss';
 import { AiOutlineBehance, AiOutlineDribbble, AiOutlineInstagram, AiOutlineTwitter } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
 import React from 'react';
