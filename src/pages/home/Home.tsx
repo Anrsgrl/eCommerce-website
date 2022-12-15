@@ -1,12 +1,13 @@
-import React from 'react'
-import Footer from '../../components/footer/Footer'
-import Header from '../../components/header/Header'
+import './home.scss';
+import HomeSlider from './components/HomeSlider/HomeSlider';
+import React from 'react';
+
 export default function Home() {
   return (
-   <>
-    <Header/>
-      <div>Home</div>
-    <Footer/>
-   </>
-  )
+    <>
+      <HomeSlider />
+      <div className="bg"></div>
+      <div className="bg"></div>
+    </>
+  );
 }

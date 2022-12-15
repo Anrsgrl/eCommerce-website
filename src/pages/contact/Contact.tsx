@@ -1,12 +1,5 @@
-import React from 'react'
-import ContactItem from './components/ContactItem'
+import React from 'react';
 
 export default function Contact() {
-    return (
-        <div>
-            <ContactItem/>
-            <ContactItem/>
-            <ContactItem/>
-        </div>
-    )
+  return <div></div>;
 }
