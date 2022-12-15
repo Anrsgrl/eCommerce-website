@@ -28,7 +28,7 @@ export default function Banner(props: IElement) {
         <p className="pagename">{pageName}</p>
       </div>
 
-      {sliderExist ? <Slider /> : <></>}
+      {sliderExist&& <Slider/>}
     </section>
   );
 }
