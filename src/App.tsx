@@ -15,6 +15,7 @@ import TestPage from './pages/TestPage/TestPage';
 import Whishlist from './pages/wishlist/Whishlist';
 
 function App() {
+  const arr = [];
   return (
     <>
       <Header />

@@ -1,4 +1,4 @@
-import '../banner/banner.scss';
+import './Banner.scss';
 // import { ChevronRight } from 'react-bootstrap-icons';
 import { ChevronRight } from 'react-bootstrap-icons';
 import { Link } from 'react-router-dom';
