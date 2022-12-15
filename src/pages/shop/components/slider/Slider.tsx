@@ -17,12 +17,10 @@ export default function Slider() {
   return (
     <div id="Slider">
       <Swiper
-  
         slidesPerView={5}
-        spaceBetween={5}
+        spaceBetween={10}
         slidesPerGroup={5}
         loopFillGroupWithBlank={true}
-       
         pagination={{
           clickable: true,
         }}
@@ -34,7 +32,7 @@ export default function Slider() {
           },
           575: {
             slidesPerView: 3,
-            spaceBetween: 30,
+            spaceBetween: 40,
           },
           // when window width is >= 768px
           768: {
@@ -43,18 +41,18 @@ export default function Slider() {
           },
           // when window width is >= 992px
           992: {
-            slidesPerView: 4,
-            spaceBetween: 10,
+            slidesPerView: 5,
+            spaceBetween: 20,
           },
           // when window width is >= 1024px
           1024: {
-            slidesPerView: 4,
-            spaceBetween: 10,
+            slidesPerView: 5,
+            spaceBetween: 12,
           },
           // when window width is >= 1024px
           1200: {
-            slidesPerView: 4,
-            spaceBetween: 20,
+            slidesPerView: 5,
+            spaceBetween: 10,
           },
         }}
         loop={true}
@@ -102,3 +100,4 @@ export default function Slider() {
     </div>
   );
 }
+

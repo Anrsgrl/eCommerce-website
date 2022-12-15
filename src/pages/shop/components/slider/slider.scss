@@ -1,9 +1,8 @@
 @import '../../../../vendors/responsive.scss';
-@import '../../../../vendors/mixins';
 #Slider{
   .swiper{
     position: relative;
-    width: 45%;
+    width: 68%;
     height: 30%;
     margin-left: auto;
     margin-right: auto;
@@ -21,7 +20,6 @@
       height: 30%;
       width: 68%;
       padding-top:140px;
-      
     }
     @include responsive(mediumSize){
       height: 20%;
@@ -37,17 +35,8 @@
         padding-top:170px;
         width:80%
         
-     }
-     @include responsive(laptop){
-      padding-top:230px;
-      width:70%
-      
-   }
-    @include responsive(tv){
-      padding-top:230px;
-      width:60%
-      
-  }
+       }
+  
    //border-radius: 3mm;
   .swiper-button-next,.swiper-button-prev{
     background-color: transparent;
@@ -69,9 +58,8 @@
   .swiper-button-next{
    left: calc(100% - 60px);
    top: calc((100% - 265px));
-   font-size:var(--swiper-navigation-size) !important;
    @include responsive(smallSize){
-     top: calc((100% - 237px));
+     top: calc((100% - 170px));
 
     left: calc(100% - 55px);
     font-size:10px;
@@ -85,15 +73,10 @@
     left: calc(100% - 58px);
  
   }
-  @include responsive(desktop){
-    top: calc((100% - 280px));
-    left: calc(100% - 58px);
- 
-  }
   
   }
   .swiper-button-prev{
-    left: calc(100% - 868px);
+    left: calc(100% - 878px);
     top: calc((100% - 265px));
     width: 30px;
    }
