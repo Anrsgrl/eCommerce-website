@@ -1,4 +1,5 @@
 @import "../../../../vendors/variables";
+@import "../../../../vendors/mixins";
 
 .DailyEssentialsItemField{
     max-width: 720px;
@@ -60,13 +61,7 @@
                     line-height: 1em;
                 }
                 .DailyProduct-Title{
-                    color: #b4b4b4;
-                    font-family:  $main-fontl;
-                    font-size: 12px;
-                    font-weight: 400;
-                    text-transform: uppercase;
-                    line-height: 1em;
-                    letter-spacing: 4px;
+                    @include dailyEssentialsLight;
                 }
                 a{
                     font-family: $main-fontl;
