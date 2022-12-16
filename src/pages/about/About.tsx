@@ -1,6 +1,7 @@
 import '../about/about.scss';
 import Banner from '../../components/banner/Banner';
 import React from 'react';
+import Props1 from './Props1';
 
 export default function About() {
   return (
@@ -27,6 +28,9 @@ export default function About() {
           </a>
         </div>
       </div>
+    </section>
+    <section className='third-part'>
+
     </section>
 
     </>
