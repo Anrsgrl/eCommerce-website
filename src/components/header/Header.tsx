@@ -1,11 +1,10 @@
 import './header.scss';
+import { AiOutlineUser } from 'react-icons/ai';
+import { CgSearch, CgShoppingCart } from 'react-icons/cg';
 import { Link } from 'react-router-dom';
 import HeaderMenu from '../HeaderMenu/HeaderMenu';
 import React, { useState } from 'react';
 import hamburger from '../../assets/images/hamburgerMenu.svg';
-import icon1 from '../../assets/images/WhiteSearch.svg';
-import icon2 from '../../assets/images/WhiteAccount.svg';
-import icon3 from '../../assets/images/WhiteCart.svg';
 import logo from '../../assets/images/WhiteLogo.svg';
 
 function Header() {
@@ -115,15 +114,15 @@ function Header() {
           </div>
           <div className="header-icons">
             <button className="icons-element icons-search search-btn formobileicon header-button">
-              <img src={icon1} alt="Search" className={linkIconClassName} />
+              <CgSearch className={linkIconClassName} />
             </button>
             <button className="icons-element icons-account header-button">
               <Link to="/" className="account-btn">
-                <img src={icon2} alt="Account" className={linkIconClassName} />
+                <AiOutlineUser className={linkIconClassName} />
               </Link>
             </button>
             <button className="icons-element icons-cart Cart-btn formobileicon header-button">
-              <img src={icon3} alt="Cart" className={linkIconClassName} />
+              <CgShoppingCart className={linkIconClassName} />
             </button>
           </div>
         </div>
