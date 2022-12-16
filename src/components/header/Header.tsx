@@ -1,4 +1,4 @@
-import './Header.scss';
+import './header.scss';
 import { Link } from 'react-router-dom';
 import HeaderMenu from '../HeaderMenu/HeaderMenu';
 import React, { useState } from 'react';
