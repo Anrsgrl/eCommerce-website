@@ -46,8 +46,8 @@ function Header() {
       <header className={color ? 'scroll-bg mobile' : ' mobile'}>
         <div className="header-container">
           <div className="hamburger-menu">
-            <button className="hamburger-button header-button" onClick={handleOpenDrawer}>
-              <img src={hamburger} alt="hamburger" className="formobileicon" />
+            <button className="header-button" onClick={handleOpenDrawer}>
+              <img src={hamburger} alt="hamburger" className="hamburger-button" />
             </button>
           </div>
           <div className="logo-field">
@@ -56,7 +56,7 @@ function Header() {
                 <img
                   src={logo}
                   alt="Our logo"
-                  className={color ? 'scroll-fill logo-image img-responsive ' : 'logo-image img-responsive'}
+                  className={color ? 'scroll-fill logo-fill img-responsive ' : 'img-responsive'}
                 />
               </Link>
             </div>
@@ -113,16 +113,17 @@ function Header() {
             </ul>
           </div>
           <div className="header-icons">
-            <button className="icons-element icons-search search-btn formobileicon header-button">
+            <button className="Hicons-element icons-search search-btn formobileicon header-button">
               <CgSearch className={linkIconClassName} />
             </button>
-            <button className="icons-element icons-account header-button">
+            <button className="Hicons-element icons-account header-button">
               <Link to="/" className="account-btn">
                 <AiOutlineUser className={linkIconClassName} />
               </Link>
             </button>
-            <button className="icons-element icons-cart Cart-btn formobileicon header-button">
+            <button className="Hicons-element icons-cart Cart-btn formobileicon header-button">
               <CgShoppingCart className={linkIconClassName} />
+              <span>0</span>
             </button>
           </div>
         </div>
