@@ -1,7 +1,7 @@
 @import '../../vendors/mixins';
 @import '../../vendors/variables';
 
-.second-part{
+.Handcrafted-field{
     width: 1519px;
     height: 1131.56px;
     margin-top: 80px;
@@ -20,18 +20,18 @@
             margin-top: 75px;
             text-align: center;
             span {
-                font-family: "GT Walsheim Pro Regular",Sans-serif;
+                font-family: $main-fonta;
                 font-size: 36px;
                 font-weight: 400;
                 line-height: 1.2em;
-                color: #000;
+                color: $black;
             }
             p {
-                font-family: "GT Walsheim Pro Regular",Sans-serif;
+                font-family: $main-fonta;
                 font-size: 22px;
                 font-weight: 400;
                 line-height: 36px;
-                color: #919191;
+                color: $more-gray;
                 margin: 0 188px;
                 margin-top: 40px;
             }
@@ -43,24 +43,24 @@
             box-sizing: border-box;
             a {
                 height: 36px;
-                color: #000;
+                color: $black;
                 border-style: solid;
                 border-width: 0 0 2px;
-                border-color: #000;
+                border-color: $black;
                 display: inline-flex;
                 align-items: center;
                 justify-content: center;
                 box-shadow: none;
                 text-decoration: none;
                 &:hover {
-                    color: #ffa749;
-                    border-color: #ffa749;
+                    color: $ginger;
+                    border-color: $ginger;
                 }
                 &:focus {
                     outline: none !important;
                 }
                 &:focus-visible {
-                    outline: #ffa749 auto 1px;
+                    outline: $ginger auto 1px;
                 }
             }
             span {

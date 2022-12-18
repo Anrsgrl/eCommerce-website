@@ -1,11 +1,19 @@
 import '../about/about.scss';
 import Banner from '../../components/banner/Banner';
 import React from 'react';
-import Props1 from './components/Handcrafted/HandcraftedItem/Props1/HandcraftedItem';
+import Handcrafted from './components/Handcrafted/Handcrafted';
 export default function About() {
   return (
     <>
-    <section className="About">
+      <Banner
+          title="About" 
+          pageName="About"
+          coverPhoto="https://casona.familab.net/wp-content/uploads/2021/08/blog-bgf.jpg"
+          sliderExist={false} />
+      <Handcrafted />
+    </>
+    // <>
+    /* <section className="About">
       <Banner
         title="About"
         pageName="About"
@@ -35,6 +43,6 @@ export default function About() {
            text='Uniquely re-engineer market-driven relationships through pandemic results. Holisticly visualize fully researched methods of empowerment and competitive benefits.' />
     </section>
 
-    </>
+    </> */
   );
 }

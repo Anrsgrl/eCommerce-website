@@ -11,20 +11,20 @@
         align-items: flex-start;
         text-align: left;
         span {
-            font-family: "GT Walsheim Pro Regular",Sans-serif;
+            font-family: $main-fonta;
             font-size: 28px;
             font-weight: 400;
             line-height: 1em;
-            color: #000;
+            color: $black;
             margin-top: 60px;
             align-items: center; 
         }
         p {
-            font-family: "GT Walsheim Pro Regular",Sans-serif;
+            font-family: $main-fonta;
             font-size: 16px;
             font-weight: 400;
             line-height: 28px;
-            color: #919191;
+            color: $more-gray;
             margin-top: 0;
             margin-bottom: 1rem;
         }

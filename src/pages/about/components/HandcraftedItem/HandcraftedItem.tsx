@@ -14,7 +14,7 @@ export default function HandcraftedItem (props: IElement) {
         <div className="Props1">
             <div className="image">
                 <Link to={'/shop'}>
-                    <img src={`${link}`}/>
+                    <img src={link}/>
                 </Link>
             </div>
             <div className="text">
@@ -23,4 +23,4 @@ export default function HandcraftedItem (props: IElement) {
             </div>
         </div>
     );
-}
+};
