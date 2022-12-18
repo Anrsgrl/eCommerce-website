@@ -1,8 +1,8 @@
 import './HeaderMenu.scss';
 import { Link } from 'react-router-dom';
 import React, { useState } from 'react';
+import {AiOutlineClose} from 'react-icons/ai';
 import rightArrow from '../../assets/images/rightArrow.svg';
-import x from '../../assets/images/Xblack.svg';
 
 interface IProps {
   isOpen: boolean;
@@ -21,7 +21,7 @@ function HeaderMenu(props: IProps) {
             <h3>Menu</h3>
             <button className="x-button" onClick={handleClose}>
               <span className="sidebar-button-text">
-                <img src={x} alt="x" className="button-x formobileicon" />
+                <AiOutlineClose className="button-x formobileicon" />
                 <span className="button-title">Close</span>
               </span>
             </button>
@@ -29,17 +29,23 @@ function HeaderMenu(props: IProps) {
           <div className="mobile-navigation default-nav-menu">
             <ul>
               <li>
-                <Link to="/home">Home</Link>
+                <button onClick={handleClose}>
+                  <Link to="/">Home</Link>
+                </button>
               </li>
               <li>
-                <Link to="/shop">Shop</Link>
+                <button onClick={handleClose}>
+                  <Link to="/shop">Shop</Link>
+                </button>
               </li>
               <li>
-                <Link to="/contact">Contact</Link>
+                <button onClick={handleClose}>
+                  <Link to="/contact">Contact</Link>
+                </button>
               </li>
               <li>
                 <button className="pages-part pages-button" onClick={() => setToggle(!toggle)}>
-                  <Link to="/">Pages</Link>
+                  <p>Pages</p>
                   <Link to="/">
                     <span className={toggle ? 'toggle-icon flip' : 'toggle-icon'}>
                       <img src={rightArrow} alt="right" />
@@ -49,22 +55,32 @@ function HeaderMenu(props: IProps) {
                 {toggle && (
                   <ul className="sub-menu">
                     <li>
-                      <Link to="/checkout">Checkout</Link>
+                      <button onClick={handleClose}>
+                        <Link to="/checkout">Checkout</Link>
+                      </button>
                     </li>
                     <li>
-                      <Link to="/ordertracking">Order Tracking</Link>
+                      <button onClick={handleClose}>
+                        <Link to="/ordertracking">Order Tracking</Link>
+                      </button>
                     </li>
                     <li>
-                      <Link to="/wishlist">Wishlist</Link>
+                      <button onClick={handleClose}>
+                        <Link to="/wishlist">Wishlist</Link>
+                      </button>
                     </li>
                     <li>
-                      <Link to="/cart">Cart</Link>
+                      <button onClick={handleClose}>
+                        <Link to="/cart">Cart</Link>
+                      </button>
                     </li>
                   </ul>
                 )}
               </li>
               <li>
-                <Link to="/">About</Link>
+                <button onClick={handleClose}>
+                  <Link to="/about">About</Link>
+                </button>
               </li>
             </ul>
           </div>

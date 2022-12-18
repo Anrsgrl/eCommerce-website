@@ -72,12 +72,7 @@ aside{
                     margin: 0;
                 }
                 .x-button{
-                    position: static;
-                    right: 15px;
-                    top: 15px;
                     line-height: 24px;
-                    height: auto;
-                    width: auto;
                     padding: 0;
                     border-radius: 3px; 
                     background: 0 0 !important;
@@ -86,11 +81,6 @@ aside{
                     letter-spacing: 2px;
                     text-transform: uppercase;
                     font-weight: 500;
-                    -webkit-transition: background-color .3s linear 0s,color .3s linear 0s,border .3s linear 0s;
-                    -moz-transition: background-color .3s linear 0s,color .3s linear 0s,border .3s linear 0s;
-                    -ms-transition: background-color .3s linear 0s,color .3s linear 0s,border .3s linear 0s;
-                    -o-transition: background-color .3s linear 0s,color .3s linear 0s,border .3s linear 0s;
-                    transition: background-color .3s linear 0s,color .3s linear 0s,border .3s linear 0s;  
                     cursor: pointer;
                     margin: 0;
                     font-family: inherit;  
@@ -99,8 +89,6 @@ aside{
                         align-items: center;
                         flex-direction: row-reverse;
                         .button-x{
-                            width: 9px;
-                            height: 9px;
                             margin-left: 3px;
                             vertical-align: middle;
                         }
@@ -109,7 +97,6 @@ aside{
                             font-weight: 400;
                             font-size: 10px;
                             text-transform: uppercase;
-                            color: $black;
                         }
                     }            
                 }               
@@ -120,6 +107,11 @@ aside{
                 height: calc(100% - 150px);
                 overflow-y: auto;
                 display: block;
+                button{
+                    @include buttonstyle;
+                    display: flex;
+                    font-family: $main-fontl;
+                }
                 ul{
                     margin-bottom: 0;
                     padding-bottom: 0;
@@ -129,9 +121,15 @@ aside{
                         display: flex;
                         align-items: center;
                         justify-content: space-between;
-                    }
-                    .pages-button{
-                        @include buttonstyle;
+                        p{
+                            margin: 0;
+                            &:hover{
+                                color: $main-blue;
+                                @media(max-width: 767px){
+                                    text-decoration: underline;
+                                }
+                            }
+                        }
                     }
                     li{
                         line-height: 24px;
@@ -143,6 +141,9 @@ aside{
                             background-color: transparent;
                             &:hover{
                                 color: $main-blue;
+                                @media(max-width: 767px){
+                                    text-decoration: underline;
+                                }
                             }
                         }
                     }
@@ -179,11 +180,7 @@ aside{
         fill: $main-blue !important;
        }
     }
-    .sidebar-button-text span:hover{
-        color: $main-blue !important;
-    }
     .sidebar-button-text:hover{
-        filter: invert(69%) sepia(24%) saturate(4130%) hue-rotate(162deg) brightness(98%) contrast(91%);
         color: $main-blue !important;
     }
 };
