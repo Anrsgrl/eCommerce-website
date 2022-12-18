@@ -1,20 +1,20 @@
 import React from 'react';
-import './HandcraftedItem.scss'
+import './HandcraftedItem.scss';
 import { Link } from 'react-router-dom';
 
 interface IElement {
-    link: string;
+    imgSrc: string;
     title: string;
     text: string;
+    imgPad: string;
 }
 export default function HandcraftedItem (props: IElement) {
-    const { link, title, text } = props;
-
+    const { imgSrc, title, text, imgPad } = props;
     return (
-        <div className="Props1">
+        <div className="Handcrafted-card" style={{ padding: `${imgPad}` }}>
             <div className="image">
                 <Link to={'/shop'}>
-                    <img src={link}/>
+                    <img src={imgSrc} alt="shop"/>
                 </Link>
             </div>
             <div className="text">

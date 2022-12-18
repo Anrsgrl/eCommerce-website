@@ -1,6 +1,10 @@
-.Props1 {
+@import "../../../../vendors/variables";
+.Handcrafted-card {
     width: 700px;
     height: 1139.75px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
 
 
     .text {
@@ -25,7 +29,7 @@
             font-weight: 400;
             line-height: 28px;
             color: $more-gray;
-            margin-top: 0;
+            margin-top: 30px;
             margin-bottom: 1rem;
         }
     }
