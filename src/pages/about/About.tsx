@@ -1,8 +1,7 @@
 import '../about/about.scss';
 import Banner from '../../components/banner/Banner';
 import React from 'react';
-import Props1 from './Props1';
-
+import Props1 from './components/Handcrafted/HandcraftedItem/Props1/HandcraftedItem';
 export default function About() {
   return (
     <>
@@ -30,7 +29,10 @@ export default function About() {
       </div>
     </section>
     <section className='third-part'>
-
+      <Props1 
+           link='https://casona.familab.net/wp-content/uploads/2021/09/about1.jpg'
+           title='Minimal & Unique'
+           text='Uniquely re-engineer market-driven relationships through pandemic results. Holisticly visualize fully researched methods of empowerment and competitive benefits.' />
     </section>
 
     </>
