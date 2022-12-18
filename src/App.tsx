@@ -7,6 +7,7 @@ import Contact from './pages/contact/Contact';
 import Footer from './components/footer/Footer';
 import Header from './components/header/Header';
 import Home from './pages/home/Home';
+import MyAccount from './pages/MyAccount/MyAccount';
 import OrderTracking from './pages/order/OrderTracking';
 import Product from './pages/product/Product';
 import React from 'react';
@@ -31,6 +32,7 @@ function App() {
           <Route path="/orderTracking" element={<OrderTracking />} />
           <Route path="/wishlist" element={<Whishlist />} />
           <Route path="/checkout" element={<CheckOut />} />
+          <Route path="/myaccount" element={<MyAccount />} />
         </Routes>
       </main>
       <Footer />
