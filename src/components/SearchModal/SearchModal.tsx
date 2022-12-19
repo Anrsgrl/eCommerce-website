@@ -13,7 +13,7 @@ export default function SearchModal(props: IProps) {
   const { isSearchOpen, handleCloseSearch } = props;
 
   const variants = {
-    setSearch : { x: 4, y: 14, opacity: 1 },
+    setSearch: { x: 4, y: 14, opacity: 1 },
     notSetSearch: { x: 4, y: 700, opacity: 0 },
   };
 

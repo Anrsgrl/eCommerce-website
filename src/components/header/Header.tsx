@@ -7,6 +7,7 @@ import React, { useState } from 'react';
 import SearchModal from '../SearchModal/SearchModal';
 import hamburger from '../../assets/images/hamburgerMenu.svg';
 import logo from '../../assets/images/WhiteLogo.svg';
+import CartAside from '../CartAside/CartAside';
 
 function Header() {
   //color
@@ -147,6 +148,7 @@ function Header() {
       </header>
       <HeaderMenu isOpen={isDrawerOpen} handleClose={handleCloseDrawer} />
       <SearchModal isSearchOpen={isSearchOpen} handleCloseSearch={handleCloseSearch} />
+      <CartAside />
     </>
   );
 }
