@@ -1,21 +1,26 @@
 import './SearchModal.scss';
 import { AiOutlineClose } from 'react-icons/ai';
 import { BiSearch } from 'react-icons/bi';
-import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import React from 'react';
 
 interface IProps {
-  isOpen: boolean;
-  handleClose: () => void;
+  isSearchOpen: boolean;
+  handleCloseSearch: () => void;
 }
 
 export default function SearchModal(props: IProps) {
-  const { isOpen, handleClose } = props;
-  const [toggle, setToggle] = useState(false);
+  const { isSearchOpen, handleCloseSearch } = props;
+
+  const variants = {
+    setSearch : { x: 4, y: 14, opacity: 1 },
+    notSetSearch: { x: 4, y: 700, opacity: 0 },
+  };
 
   return (
-    <div className="SearchModal-field">
+    <div className={isSearchOpen ? 'SearchModal-field search-open' : 'SearchModal-field'}>
       <div className="SearchModal-header">
-        <button className="x-button" onClick={handleClose}>
+        <button className="x-button" onClick={handleCloseSearch}>
           <span className="sidebar-button-text">
             <AiOutlineClose className="button-x formobileicon" />
             <span className="button-title">Close</span>
@@ -23,14 +28,26 @@ export default function SearchModal(props: IProps) {
         </button>
         <p>Type the keyword or SKU</p>
       </div>
-      <div className="SearchModal-bottom">
+      <motion.div
+        className="SearchModal-bottom"
+        initial={{
+          x: 4,
+          y: 700,
+          opacity: 0,
+        }}
+        animate={isSearchOpen ? 'setSearch' : 'notSetSearch'}
+        transition={{
+          duration: 1.2,
+        }}
+        variants={variants}
+      >
         <div className="SearchModal-bottom-content">
-          <input type="search" placeholder='Search...' />
-          <button type='submit'>
+          <input type="text" placeholder="Search..." />
+          <button type="submit">
             <BiSearch />
           </button>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }

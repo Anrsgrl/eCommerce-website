@@ -4,10 +4,9 @@ import { CgSearch, CgShoppingCart } from 'react-icons/cg';
 import { Link } from 'react-router-dom';
 import HeaderMenu from '../HeaderMenu/HeaderMenu';
 import React, { useState } from 'react';
+import SearchModal from '../SearchModal/SearchModal';
 import hamburger from '../../assets/images/hamburgerMenu.svg';
 import logo from '../../assets/images/WhiteLogo.svg';
-import { SearchHeart } from 'react-bootstrap-icons';
-import SearchModal from '../SearchModal/SearchModal';
 
 function Header() {
   //color
@@ -15,9 +14,11 @@ function Header() {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const handleOpenDrawer = () => {
     setIsDrawerOpen(true);
+    document.body.style.overflow = 'hidden';
   };
   const handleCloseDrawer = () => {
     setIsDrawerOpen(false);
+    document.body.style.overflow = 'auto';
   };
   const changeColor = () => {
     if (window.scrollY >= 96) {
@@ -26,6 +27,17 @@ function Header() {
       setColor(false);
     }
   };
+
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const handleOpenSearch = () => {
+    setIsSearchOpen(true);
+    document.body.style.overflow = 'hidden';
+  };
+  const handleCloseSearch = () => {
+    setIsSearchOpen(false);
+    document.body.style.overflow = 'auto';
+  };
+
   window.addEventListener('scroll', changeColor);
 
   //close clickoutside
@@ -115,11 +127,14 @@ function Header() {
             </ul>
           </div>
           <div className="header-icons">
-            <button className="Hicons-element icons-search search-btn formobileicon header-button">
+            <button
+              className="Hicons-element icons-search search-btn formobileicon header-button"
+              onClick={handleOpenSearch}
+            >
               <CgSearch className={linkIconClassName} />
             </button>
             <button className="Hicons-element icons-account header-button">
-              <Link to="/" className="account-btn">
+              <Link to="/myAccount" className="account-btn">
                 <AiOutlineUser className={linkIconClassName} />
               </Link>
             </button>
@@ -131,7 +146,7 @@ function Header() {
         </div>
       </header>
       <HeaderMenu isOpen={isDrawerOpen} handleClose={handleCloseDrawer} />
-      <SearchModal isOpen={isDrawerOpen} handleClose={handleCloseDrawer} />
+      <SearchModal isSearchOpen={isSearchOpen} handleCloseSearch={handleCloseSearch} />
     </>
   );
 }
