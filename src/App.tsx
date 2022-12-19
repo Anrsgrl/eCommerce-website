@@ -1,4 +1,5 @@
 import './App.scss';
+import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import About from './pages/about/About';
 import Cart from './pages/cart/Cart';
@@ -10,16 +11,17 @@ import Home from './pages/home/Home';
 import MyAccount from './pages/MyAccount/MyAccount';
 import OrderTracking from './pages/order/OrderTracking';
 import Product from './pages/product/Product';
-import React from 'react';
 import Shop from './pages/shop/Shop';
 import TestPage from './pages/TestPage/TestPage';
 import Whishlist from './pages/wishlist/Whishlist';
+
+
 
 function App() {
   const arr = [];
   return (
     <>
-      <Header />
+      <Header/>
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -35,7 +37,7 @@ function App() {
           <Route path="/myaccount" element={<MyAccount />} />
         </Routes>
       </main>
-      <Footer />
+    <Footer/>
     </>
   );
 }
