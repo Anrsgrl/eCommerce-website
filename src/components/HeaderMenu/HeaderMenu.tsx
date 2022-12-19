@@ -1,7 +1,7 @@
 import './HeaderMenu.scss';
+import { AiOutlineClose } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
 import React, { useState } from 'react';
-import {AiOutlineClose} from 'react-icons/ai';
 import rightArrow from '../../assets/images/rightArrow.svg';
 
 interface IProps {

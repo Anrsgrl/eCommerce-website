@@ -6,6 +6,8 @@ import HeaderMenu from '../HeaderMenu/HeaderMenu';
 import React, { useState } from 'react';
 import hamburger from '../../assets/images/hamburgerMenu.svg';
 import logo from '../../assets/images/WhiteLogo.svg';
+import { SearchHeart } from 'react-bootstrap-icons';
+import SearchModal from '../SearchModal/SearchModal';
 
 function Header() {
   //color
@@ -129,6 +131,7 @@ function Header() {
         </div>
       </header>
       <HeaderMenu isOpen={isDrawerOpen} handleClose={handleCloseDrawer} />
+      <SearchModal isOpen={isDrawerOpen} handleClose={handleCloseDrawer} />
     </>
   );
 }
