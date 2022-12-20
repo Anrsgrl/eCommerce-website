@@ -18,8 +18,8 @@ export default function SearchModal(props: IProps) {
   };
 
   return (
-    <div className={isSearchOpen ? 'SearchModal-field search-open' : 'SearchModal-field'}>
-      <div className="SearchModal-header">
+    <div className={isSearchOpen ? 'search-modal-field search-open' : 'search-modal-field'}>
+      <div className="search-modal-header">
         <button className="x-button" onClick={handleCloseSearch}>
           <span className="sidebar-button-text">
             <AiOutlineClose className="button-x formobileicon" />
@@ -29,7 +29,7 @@ export default function SearchModal(props: IProps) {
         <p>Type the keyword or SKU</p>
       </div>
       <motion.div
-        className="SearchModal-bottom"
+        className="search-modal-bottom"
         initial={{
           x: 4,
           y: 700,
@@ -41,7 +41,7 @@ export default function SearchModal(props: IProps) {
         }}
         variants={variants}
       >
-        <div className="SearchModal-bottom-content">
+        <div className="search-modal-bottom-content">
           <input type="text" placeholder="Search..." />
           <button type="submit">
             <BiSearch />
