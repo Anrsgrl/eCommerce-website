@@ -1,9 +1,11 @@
-import Banner from '../../components/banner/Banner';
 import React from 'react';
+import Banner from '../../components/Banner/Banner';
+import ProductCard from '../../components/productCard/ProductCard';
 
 export default function Shop() {
   return (
-    <section className="Shop">
+    <>
+     <section className="Shop">
       <Banner
         title="Shop"
         pageName="Shop"
@@ -11,5 +13,10 @@ export default function Shop() {
         sliderExist={true}
       />
     </section>
+    <section className='products'>
+       <ProductCard/>
+    </section>
+    </>
+   
   );
 }
