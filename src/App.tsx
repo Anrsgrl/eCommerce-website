@@ -8,6 +8,7 @@ import Contact from './pages/contact/Contact';
 import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
 import Home from './pages/home/Home';
+import MyAccount from './pages/MyAccount/MyAccount';
 import OrderTracking from './pages/order/OrderTracking';
 import Product from './pages/product/Product';
 import Shop from './pages/shop/Shop';
@@ -33,6 +34,7 @@ function App() {
           <Route path="/orderTracking" element={<OrderTracking />} />
           <Route path="/wishlist" element={<Whishlist />} />
           <Route path="/checkout" element={<CheckOut />} />
+          <Route path="/myaccount" element={<MyAccount />} />
         </Routes>
       </main>
     <Footer/>

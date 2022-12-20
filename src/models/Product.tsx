@@ -1,7 +1,7 @@
-export interface Iproduct{
-    Id:number;
+export interface IProduct{
+    id:number;
     name:string;
     price:number;
-    disCountPrice?:number | null;
-    Image:string
+    discountPrice?:number | null;
+    image:string
 }
