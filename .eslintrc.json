@@ -37,12 +37,6 @@
     "jsx-a11y/heading-has-content": [ 2, {
       "components": [ "MyHeading" ]
    }],
-   "lit-a11y/heading-has-content": [
-    "error",
-    {
-      "customHeadingElements": ["custom-heading"]
-    }
-  ],
     "prettier/prettier": "warn",
     "no-duplicate-imports": [
       "error",
