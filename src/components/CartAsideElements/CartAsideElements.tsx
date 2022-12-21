@@ -4,7 +4,7 @@ import bowl from '../../assets/images/bowl.jpg';
 
 const CartAsideElements = () => {
   return (
-    <li>
+    <li className="listOfCarts">
       <div className="list-img">
         <img src={bowl} alt="bowl" />
       </div>
