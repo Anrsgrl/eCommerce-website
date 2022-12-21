@@ -2,23 +2,25 @@ import './header.scss';
 import { AiOutlineUser } from 'react-icons/ai';
 import { CgSearch, CgShoppingCart } from 'react-icons/cg';
 import { Link } from 'react-router-dom';
+import { openHamburger, openSearch } from './headerAsideSlice';
 import CartAside from '../CartAside/CartAside';
 import HeaderMenu from '../HeaderMenu/HeaderMenu';
 import React, { useState } from 'react';
 import SearchModal from '../SearchModal/SearchModal';
 import hamburger from '../../assets/images/hamburgerMenu.svg';
 import logo from '../../assets/images/WhiteLogo.svg';
+import { useDispatch, useSelector } from 'react-redux';
+import { RootState } from '../../store/store';
 
 function Header() {
   //color
   const [color, setColor] = useState(false);
-  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const handleOpenDrawer = () => {
-    setIsDrawerOpen(true);
+    //setIsDrawerOpen(true);
     document.body.style.overflow = 'hidden';
   };
   const handleCloseDrawer = () => {
-    setIsDrawerOpen(false);
+   // setIsDrawerOpen(false);
     document.body.style.overflow = 'auto';
   };
   const changeColor = () => {
@@ -29,17 +31,22 @@ function Header() {
     }
   };
 
-  const [isSearchOpen, setIsSearchOpen] = useState(false);
-  const handleOpenSearch = () => {
-    setIsSearchOpen(true);
-    document.body.style.overflow = 'hidden';
-  };
-  const handleCloseSearch = () => {
-    setIsSearchOpen(false);
-    document.body.style.overflow = 'auto';
-  };
+  // const [isSearchOpen, setIsSearchOpen] = useState(false);
+  // const handleOpenSearch = () => {
+  //   setIsSearchOpen(true);
+  //   document.body.style.overflow = 'hidden';
+  // };
+  // const handleCloseSearch = () => {
+  //   setIsSearchOpen(false);
+  //   document.body.style.overflow = 'auto';
+  // };
 
   window.addEventListener('scroll', changeColor);
+
+  const dispatch = useDispatch();
+
+  const openHamburgerAside = () => dispatch(openHamburger());
+  const openSearchAside = () => dispatch(openSearch());
 
   //close clickoutside
 
@@ -61,7 +68,7 @@ function Header() {
       <header className={color ? 'scroll-bg mobile' : ' mobile'}>
         <div className="header-container">
           <div className="hamburger-menu">
-            <button className="header-button" onClick={handleOpenDrawer}>
+            <button className="header-button" onClick={openHamburgerAside}>
               <img src={hamburger} alt="hamburger" className="hamburger-button" />
             </button>
           </div>
@@ -130,7 +137,7 @@ function Header() {
           <div className="header-icons">
             <button
               className="Hicons-element icons-search search-btn formobileicon header-button"
-              onClick={handleOpenSearch}
+              onClick={openSearchAside}
             >
               <CgSearch className={linkIconClassName} />
             </button>
@@ -146,8 +153,8 @@ function Header() {
           </div>
         </div>
       </header>
-      <HeaderMenu isOpen={isDrawerOpen} handleClose={handleCloseDrawer} />
-      <SearchModal isSearchOpen={isSearchOpen} handleCloseSearch={handleCloseSearch} />
+      <HeaderMenu />
+      <SearchModal />
       <CartAside />
     </>
   );
