@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 import { RootState } from '../../store/store';
 import { closeCart } from '../header/headerAsideSlice';
 import { useDispatch, useSelector } from 'react-redux';
+import CartAsideElements from '../CartAsideElements/CartAsideElements';
 import React from 'react';
-import bowl from '../../assets/images/bowl.jpg';
 import rightArrow from '../../assets/images/rightArrow.svg';
 import shoppingbag from '../../assets/images/shoppingbagx.svg';
 
@@ -29,76 +29,7 @@ export default function CartAside() {
         </div>
         <div className="cart-aside-content">
           <ul>
-            <li>
-              <div className="list-img">
-                <img src={bowl} alt="bowl" />
-              </div>
-              <div className="list-content">
-                <p>Keny Bowl</p>
-                <p>QTY: 2</p>
-                <p>$25.00</p>
-              </div>
-            </li>
-            <li>
-              <div className="list-img">
-                <img src={bowl} alt="bowl" />
-              </div>
-              <div className="list-content">
-                <p>Keny Bowl</p>
-                <p>QTY: 2</p>
-                <p>$25.00</p>
-              </div>
-            </li>
-            <li>
-              <div className="list-img">
-                <img src={bowl} alt="bowl" />
-              </div>
-              <div className="list-content">
-                <p>Keny Bowl</p>
-                <p>QTY: 2</p>
-                <p>$25.00</p>
-              </div>
-            </li>
-            <li>
-              <div className="list-img">
-                <img src={bowl} alt="bowl" />
-              </div>
-              <div className="list-content">
-                <p>Keny Bowl</p>
-                <p>QTY: 2</p>
-                <p className="list-content-price">$25.00</p>
-              </div>
-            </li>
-            <li>
-              <div className="list-img">
-                <img src={bowl} alt="bowl" />
-              </div>
-              <div className="list-content">
-                <p>Keny Bowl</p>
-                <p>QTY: 2</p>
-                <p className="list-content-price">$25.00</p>
-              </div>
-            </li>
-            <li>
-              <div className="list-img">
-                <img src={bowl} alt="bowl" />
-              </div>
-              <div className="list-content">
-                <p>Keny Bowl</p>
-                <p>QTY: 2</p>
-                <p className="list-content-price">$25.00</p>
-              </div>
-            </li>
-            <li>
-              <div className="list-img">
-                <img src={bowl} alt="bowl" />
-              </div>
-              <div className="list-content">
-                <p>Keny Bowl</p>
-                <p>QTY: 2</p>
-                <p className="list-content-price"> $25.00</p>
-              </div>
-            </li>
+            <CartAsideElements />
           </ul>
           <div className="content-bottom">
             <div className="cart-aside-content-price">
