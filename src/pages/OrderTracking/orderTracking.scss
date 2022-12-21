@@ -37,7 +37,7 @@
                 .order-tracking-content-title{
                     font-family: $main-fonta;
                     color: $light-gray;
-                    margin-bottom: 8px;
+                    margin-bottom: 40px;
                 }
                 .order-tracking-content-inputs{
                     display: flex;
@@ -52,6 +52,9 @@
                         position: relative;
                         width: 50%;
                         @media(max-width: 640px){
+                            width: 100%;
+                        }
+                        label{
                             width: 100%;
                         }
                         span{
