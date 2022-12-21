@@ -25,7 +25,7 @@ export default function ProductCard() {
           <div className="product-item row d-flex justify-content-between align-items-center">
             {productCardState.products.map((product, index) => (
               <div
-                className="col-12 col-sm-6 col-md-3 col-3 col-lg-3 col-xl-3 col-xxl-3 overflow-hidden"
+                className="col-6 col-sm-6 col-md-4  col-lg-3 col-xl-3 col-xxl-3 overflow-hidden"
                 key={index}
               >
                 <Link to={`product/${product.id}`}>
@@ -40,7 +40,7 @@ export default function ProductCard() {
                       </Link>
                       {product.discountPrice && <span>{product.discountPrice}</span>}
                       <span className="price">${product.price}</span>
-                      <h1>am I really needed?..</h1>
+                    
                     </div>
                     <div className="buttonsGroup">
                       <button className="wishlish">
