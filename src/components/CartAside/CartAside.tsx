@@ -66,7 +66,7 @@ export default function CartAside() {
               <div className="list-content">
                 <p>Keny Bowl</p>
                 <p>QTY: 2</p>
-                <p>$25.00</p>
+                <p className="list-content-price">$25.00</p>
               </div>
             </li>
             <li>
@@ -76,7 +76,7 @@ export default function CartAside() {
               <div className="list-content">
                 <p>Keny Bowl</p>
                 <p>QTY: 2</p>
-                <p>$25.00</p>
+                <p className="list-content-price">$25.00</p>
               </div>
             </li>
             <li>
@@ -86,7 +86,7 @@ export default function CartAside() {
               <div className="list-content">
                 <p>Keny Bowl</p>
                 <p>QTY: 2</p>
-                <p>$25.00</p>
+                <p className="list-content-price">$25.00</p>
               </div>
             </li>
             <li>
@@ -96,7 +96,7 @@ export default function CartAside() {
               <div className="list-content">
                 <p>Keny Bowl</p>
                 <p>QTY: 2</p>
-                <p>$25.00</p>
+                <p className="list-content-price"> $25.00</p>
               </div>
             </li>
           </ul>
@@ -106,8 +106,12 @@ export default function CartAside() {
               <p className="cart-aside-content-priceText">$200.00</p>
             </div>
             <div className="cart-aside-content-buttons">
-              <Link to={'/checkout'}>Checkout</Link>
-              <Link to={'/cart'}>View Cart</Link>
+              <Link to={'/checkout'}>
+                <button>Checkout</button>
+              </Link>
+              <Link to={'/cart'}>
+                <button>View Cart</button>
+              </Link>
             </div>
           </div>
         </div>
