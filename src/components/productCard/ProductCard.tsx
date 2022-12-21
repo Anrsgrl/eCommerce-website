@@ -62,4 +62,8 @@ export default function ProductCard() {
       </div>
     </>
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 36148452a857b167a97d3c30647b523b09469174
