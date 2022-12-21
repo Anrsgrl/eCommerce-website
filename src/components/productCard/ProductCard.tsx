@@ -40,6 +40,10 @@ export default function ProductCard() {
                       </Link>
                       {product.discountPrice && <span>{product.discountPrice}</span>}
                       <span className="price">${product.price}</span>
+<<<<<<< HEAD
+=======
+                    
+>>>>>>> cfd2fce00d53e037a5608c21621ff82eac331363
                     </div>
                     <div className="buttonsGroup">
                       <button className="wishlish">
@@ -61,4 +65,8 @@ export default function ProductCard() {
       </div>
     </>
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> cfd2fce00d53e037a5608c21621ff82eac331363
