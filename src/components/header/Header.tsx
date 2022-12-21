@@ -2,27 +2,19 @@ import './header.scss';
 import { AiOutlineUser } from 'react-icons/ai';
 import { CgSearch, CgShoppingCart } from 'react-icons/cg';
 import { Link } from 'react-router-dom';
-import { openHamburger, openSearch } from './headerAsideSlice';
+import { openCart, openHamburger, openSearch } from './headerAsideSlice';
+import { useDispatch } from 'react-redux';
 import CartAside from '../CartAside/CartAside';
 import HeaderMenu from '../HeaderMenu/HeaderMenu';
 import React, { useState } from 'react';
 import SearchModal from '../SearchModal/SearchModal';
 import hamburger from '../../assets/images/hamburgerMenu.svg';
 import logo from '../../assets/images/WhiteLogo.svg';
-import { useDispatch, useSelector } from 'react-redux';
-import { RootState } from '../../store/store';
 
 function Header() {
   //color
+
   const [color, setColor] = useState(false);
-  const handleOpenDrawer = () => {
-    //setIsDrawerOpen(true);
-    document.body.style.overflow = 'hidden';
-  };
-  const handleCloseDrawer = () => {
-   // setIsDrawerOpen(false);
-    document.body.style.overflow = 'auto';
-  };
   const changeColor = () => {
     if (window.scrollY >= 96) {
       setColor(true);
@@ -30,23 +22,15 @@ function Header() {
       setColor(false);
     }
   };
-
-  // const [isSearchOpen, setIsSearchOpen] = useState(false);
-  // const handleOpenSearch = () => {
-  //   setIsSearchOpen(true);
-  //   document.body.style.overflow = 'hidden';
-  // };
-  // const handleCloseSearch = () => {
-  //   setIsSearchOpen(false);
-  //   document.body.style.overflow = 'auto';
-  // };
-
   window.addEventListener('scroll', changeColor);
+
+  //redux
 
   const dispatch = useDispatch();
 
   const openHamburgerAside = () => dispatch(openHamburger());
   const openSearchAside = () => dispatch(openSearch());
+  const openCartAside = () => dispatch(openCart());
 
   //close clickoutside
 
@@ -146,7 +130,10 @@ function Header() {
                 <AiOutlineUser className={linkIconClassName} />
               </Link>
             </button>
-            <button className="Hicons-element icons-cart Cart-btn formobileicon header-button">
+            <button
+              className="Hicons-element icons-cart Cart-btn formobileicon header-button"
+              onClick={openCartAside}
+            >
               <CgShoppingCart className={linkIconClassName} />
               <span>0</span>
             </button>

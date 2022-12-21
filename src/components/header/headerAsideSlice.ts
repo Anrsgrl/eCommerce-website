@@ -3,11 +3,13 @@ import { createSlice } from '@reduxjs/toolkit';
 interface AsideOpenerState {
     isDrawerOpen: boolean;
     isSearchOpen: boolean;
+    isCartOpen: boolean;
 }
 
 const initialState: AsideOpenerState = {
     isDrawerOpen: false,
     isSearchOpen: false,
+    isCartOpen: false,
 };
 
 export const headerAsideSlice = createSlice({
@@ -30,9 +32,18 @@ export const headerAsideSlice = createSlice({
             state.isSearchOpen = false;
             document.body.style.overflow = 'auto';
         },
+        openCart: (state) => {
+            state.isCartOpen = true;
+            document.body.style.overflow = 'hidden';
+        },
+        closeCart: (state) => {
+            state.isCartOpen = false;
+            document.body.style.overflow = 'auto';
+        },
     },
 });
 
-export const { openHamburger, closeHamburger, openSearch, closeSearch } = headerAsideSlice.actions;
+export const { openHamburger, closeHamburger, openSearch, closeSearch, openCart, closeCart } =
+    headerAsideSlice.actions;
 
 export const headerAsideReducer = headerAsideSlice.reducer;
