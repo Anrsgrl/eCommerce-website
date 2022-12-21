@@ -6,7 +6,7 @@ import bowl from '../../assets/images/bowl.jpg';
 
 export default function CartAside() {
   return (
-<<<<<<< HEAD
+
     <aside className="cart-aside-field">
         <div className="cart-aside-part">
           <div className="cart-aside-header">
@@ -46,43 +46,7 @@ export default function CartAside() {
           </div>
         </div>
         <div className="cart-aside-empty"></div>
-=======
-    <aside className="CartAside-field">
-      <div className="CartAside-part">
-        <div className="CartAside-header">
-          <h3>SHOPPING CART</h3>
-          <button className="x-button CartAside-x">
-            <span className="sidebar-button-text">
-              <AiOutlineClose className="button-x formobileicon" />
-              <span className="button-title">Close</span>
-            </span>
-          </button>
-        </div>
-        <div className="CartAside-content">
-          <ul>
-            <li>
-              <div className="list-img">
-                <img src={bowl} alt="bowl" />
-              </div>
-              <div className="list-content">
-                <p>Keny Bowl</p>
-                <p>QTY: 2</p>
-                <p>$25.00</p>
-              </div>
-            </li>
-          </ul>
-          <div className="CartAside-content-price">
-            <p className="CartAside-content-priceTitle">Subtotal:</p>
-            <p className="CartAside-content-priceText">$200.00</p>
-          </div>
-          <div className="CartAside-content-buttons">
-            <Link to={'/checkout'}>Checkout</Link>
-            <Link to={'/cart'}>View Cart</Link>
-          </div>
-        </div>
-      </div>
-      <div className="CartAside-empty"></div>
->>>>>>> 36148452a857b167a97d3c30647b523b09469174
-    </aside>
+      </aside>
+  
   );
 }
