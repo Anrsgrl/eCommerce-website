@@ -1,5 +1,5 @@
 import './orderTracking.scss';
-import Banner from '../../components/banner/Banner';
+import Banner from '../../components/Banner/Banner';
 import React, { useState } from 'react';
 import bannerBg from '../../assets/images/bannerBg.jpg';
 

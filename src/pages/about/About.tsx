@@ -1,5 +1,5 @@
 import '../about/about.scss';
-import Banner from '../../components/banner/Banner';
+import Banner from '../../components/Banner/Banner';
 import Handcrafted from './components/Handcrafted/Handcrafted';
 import React from 'react';
 

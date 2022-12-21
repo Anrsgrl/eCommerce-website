@@ -1,4 +1,4 @@
-import Banner from '../../components/banner/Banner';
+import Banner from '../../components/Banner/Banner';
 import ProductCard from '../../components/productCard/ProductCard';
 import React from 'react';
 
