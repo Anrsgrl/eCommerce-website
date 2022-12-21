@@ -1,26 +1,62 @@
 @import "../../../../vendors/variables";
 .Handcrafted-card {
-    width: 700px;
-    height: 1139.75px;
+    width: 43%;
+    height: 1145.75px;
     overflow: hidden;
     display: flex;
     flex-direction: column;
-
-
-    .text {
-        width: 600px;
-        height: 216px;
+    padding: 15px 0;
+    @media(max-width: 1024px){
+        width: 47%;
+        height: 888.75px;
+    }
+    @media(max-width: 767px){
+        width: 100%;
+        height: auto;
+    }
+    .HCard-img{
+        width: 100%;
+        object-fit: cover;
+        overflow: hidden;
+        display: flex;
+        justify-content: space-around;
+        img{
+            @media(max-width: 1024px){
+                height: 503.66px;
+            }
+            @media(max-width: 767px){
+                object-fit: cover;
+                max-width: 100%;
+                height: auto;
+            }
+        }
+    }
+    .Handcrafted-card-content {
         display: flex;
         flex-direction: column;
         text-align: left;
+        margin: 60px 0 30px;
+        @media(max-width: 1024px){
+            margin: 40px 0 0;
+        }
+        @media(max-width: 767px){
+            margin: 30px 0 0;
+        }
         span {
+            margin-bottom: 30px;
+            margin-top: 0;
+            color: $black;
             font-family: $main-fonta;
             font-size: 28px;
             font-weight: 400;
             line-height: 1em;
-            color: $black;
-            margin-top: 60px;
-            align-items: center; 
+            @media(max-width: 1024px){
+                margin-bottom: 20px;
+            }
+            @media(max-width: 767px){
+                margin-bottom: 10px;
+                font-size: 22px
+            }
         }
         p {
             font-family: $main-fonta;
@@ -31,6 +67,10 @@
             margin-bottom: 1rem;
             margin-top: 0;
             width: fit-content;
+            @media(max-width: 1024px){
+                font-size: 15px;
+                line-height: 1.6em;
+            }
             @media(max-width: 767px){
                 font-size: 15px;
                 line-height: 1.6em;

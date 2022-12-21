@@ -1,8 +1,9 @@
 import '../about/about.scss';
 import Banner from '../../components/banner/Banner';
 import React from 'react';
+import GentSac from './components/GentSac/GentSac';
 import Handcrafted from './components/Handcrafted/Handcrafted';
-import AboutServices from './components/AboutServices/AboutServices';
+// import AboutServices from './components/AboutServices/AboutServices';
 export default function About() {
   return (
     <>
@@ -11,8 +12,9 @@ export default function About() {
           pageName="About"
           coverPhoto="https://casona.familab.net/wp-content/uploads/2021/08/blog-bgf.jpg"
           sliderExist={false} />
+      <GentSac />
       <Handcrafted />
-      <AboutServices />
+      {/* <AboutServices /> */}
     </>
   );
 }

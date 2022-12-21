@@ -1,36 +1,36 @@
-@import "../../../../vendors/variables";
+// @import "../../../../vendors/variables";
 
-.AServices-field {
-    width: 1519px;
-    height: 670.8px;
-    background-image: url(https://casona.familab.net/wp-content/uploads/2021/09/home_classic_big_banner.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    transition: background .3s,border .3s,border-radius .3s,box-shadow .3s;
-    padding: 125px 0 150px;
-    .AServices-title {
-        width: 1470px;
-        height: 124px;
-        margin: 0 auto;
-        padding: 10px;
-        display: flex;
-        flex-wrap: wrap;
-        text-align: center;
-        justify-content: center;
-        span {
-            margin-bottom: 80px;
-            font-family: $main-fonta;
-            font-size: 36px;
-            font-weight: 400;
-            line-height: 31px;
-            color: white;
-        }
-    }
-    .AServices-items {
-        width: 1470px;
-        height: 271.8px;
-        margin: 0 auto;
-        display: flex;
-    }
-}
+// .AServices-field {
+//     width: 1519px;
+//     height: 670.8px;
+//     background-image: url(https://casona.familab.net/wp-content/uploads/2021/09/home_classic_big_banner.jpg);
+//     background-repeat: no-repeat;
+//     background-size: cover;
+//     background-attachment: fixed;
+//     transition: background .3s,border .3s,border-radius .3s,box-shadow .3s;
+//     padding: 125px 0 150px;
+//     .AServices-title {
+//         width: 1470px;
+//         height: 124px;
+//         margin: 0 auto;
+//         padding: 10px;
+//         display: flex;
+//         flex-wrap: wrap;
+//         text-align: center;
+//         justify-content: center;
+//         span {
+//             margin-bottom: 80px;
+//             font-family: $main-fonta;
+//             font-size: 36px;
+//             font-weight: 400;
+//             line-height: 31px;
+//             color: white;
+//         }
+//     }
+//     .AServices-items {
+//         width: 1470px;
+//         height: 271.8px;
+//         margin: 0 auto;
+//         display: flex;
+//     }
+// }
