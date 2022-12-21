@@ -1,4 +1,5 @@
 // import React, { useRef, useState } from "react";
+
 import './slider.scss';
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -21,7 +22,7 @@ export default function Slider() {
         slidesPerGroup={5}
         loopFillGroupWithBlank={true}
         pagination={{
-          clickable: false,
+          clickable: true,
         }}
         breakpoints={{
           // when window width is >= 575px
@@ -55,7 +56,7 @@ export default function Slider() {
           },
         }}
         loop={true}
-        navigation={false}
+        navigation={true}
         modules={[Pagination, Navigation]}
         className="mySwiper"
       >
@@ -99,3 +100,4 @@ export default function Slider() {
     </div>
   );
 }
+

@@ -2,16 +2,15 @@
 #Slider{
   .swiper{
     position: relative;
-    width: 65%;
-    height: 35%;
+    width: 68%;
+    height: 30%;
     margin-left: auto;
     margin-right: auto;
     margin: auto;
-    padding-top: 260px;
+    padding-top: 240px;
     padding-left: 30px;
     padding-right: 30px;
     background-color: transparent;
-
     @include responsive(smartphone-potrait){
       width:70%;
       padding-top: 120px;
@@ -36,16 +35,7 @@
         padding-top:170px;
         width:80%
         
-    }
-    @include responsive(laptop){
-      padding-top: 180px;
-      width: 80%;
-    }
-    @include responsive(desktop){
-      padding-top: 220px;
-      width: 80%;
-    }
-
+       }
   
    //border-radius: 3mm;
   .swiper-button-next,.swiper-button-prev{
@@ -65,31 +55,31 @@
     }
   }
  
-  // .swiper-button-next{
-  //  left: calc(100% - 60px);
-  //  top: calc((100% - 265px));
-  //  @include responsive(smallSize){
-  //    top: calc((100% - 170px));
+  .swiper-button-next{
+   left: calc(100% - 60px);
+   top: calc((100% - 265px));
+   @include responsive(smallSize){
+     top: calc((100% - 170px));
 
-  //   left: calc(100% - 55px);
-  //   font-size:10px;
-  // }
-  // @include responsive(mediumSize){
-  //   top: calc((100% - 245px));
-  //   left: calc(100% - 58px);
-  // }
-  // @include responsive(smartphone-landscape){
-  //   top: calc((100% - 230px));
-  //   left: calc(100% - 58px);
+    left: calc(100% - 55px);
+    font-size:10px;
+  }
+  @include responsive(mediumSize){
+    top: calc((100% - 245px));
+    left: calc(100% - 58px);
+  }
+  @include responsive(smartphone-landscape){
+    top: calc((100% - 230px));
+    left: calc(100% - 58px);
  
-  // }
+  }
   
-  // }
-  // .swiper-button-prev{
-  //   left: calc(100% - 878px);
-  //   top: calc((100% - 265px));
-  //   width: 30px;
-  //  }
+  }
+  .swiper-button-prev{
+    left: calc(100% - 878px);
+    top: calc((100% - 265px));
+    width: 30px;
+   }
     .swiper-slide {
       text-align: center;
       font-size: 18px;
