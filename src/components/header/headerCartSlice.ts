@@ -9,7 +9,7 @@ const initialState: CartCounterState = {
 };
 
 export const CartCounterSlice = createSlice({
-    name: 'cartCounter',
+    name: 'CartCounterSlice',
     initialState: initialState,
     reducers: {
         increase: (state) => {
