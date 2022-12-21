@@ -74,6 +74,11 @@ function HeaderMenu(props: IProps) {
                         <Link to="/cart">Cart</Link>
                       </button>
                     </li>
+                    <li>
+                      <button onClick={handleClose}>
+                        <Link to="/myAccount">My Account</Link>
+                      </button>
+                    </li>
                   </ul>
                 )}
               </li>

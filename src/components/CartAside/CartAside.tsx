@@ -6,18 +6,18 @@ import bowl from '../../assets/images/bowl.jpg';
 
 export default function CartAside() {
   return (
-    <aside className="CartAside-field">
-        <div className="CartAside-part">
-          <div className="CartAside-header">
+    <aside className="cart-aside-field">
+        <div className="cart-aside-part">
+          <div className="cart-aside-header">
             <h3>SHOPPING CART</h3>
-            <button className="x-button CartAside-x">
+            <button className="x-button cart-aside-x">
               <span className="sidebar-button-text">
                 <AiOutlineClose className="button-x formobileicon" />
                 <span className="button-title">Close</span>
               </span>
             </button>
           </div>
-          <div className="CartAside-content">
+          <div className="cart-aside-content">
             <ul>
                 <li>
                     <div className="list-img">
@@ -30,11 +30,11 @@ export default function CartAside() {
                     </div>
                 </li>
             </ul>
-            <div className="CartAside-content-price">
-                <p className="CartAside-content-priceTitle">Subtotal:</p>
-                <p className="CartAside-content-priceText">$200.00</p>
+            <div className="cart-aside-content-price">
+                <p className="cart-aside-content-priceTitle">Subtotal:</p>
+                <p className="cart-aside-content-priceText">$200.00</p>
             </div>
-            <div className="CartAside-content-buttons">
+            <div className="cart-aside-content-buttons">
                 <Link to={'/checkout'}>
                     Checkout
                 </Link>
@@ -44,7 +44,7 @@ export default function CartAside() {
             </div>
           </div>
         </div>
-        <div className="CartAside-empty"></div>
+        <div className="cart-aside-empty"></div>
     </aside>
   );
 }

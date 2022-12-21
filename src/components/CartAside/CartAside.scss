@@ -1,14 +1,14 @@
 @import '../../vendors/mixins';
 @import '../../vendors/variables';
 
-.CartAside-field{
+.cart-aside-field{
     width: 460px;
     position: absolute;
     right: 0;
     background-color: $white;
-    .CartAside-part{
+    .cart-aside-part{
         height: 100vh;
-        .CartAside-header{
+        .cart-aside-header{
             position: relative;
             display: flex;
             width: 100%;
@@ -56,13 +56,13 @@
                     }
                 }            
             }  
-            .CartAside-x{
+            .cart-aside-x{
                 position: absolute;
                 right: 20px;
                 top: 20px;
             }
         }
-        .CartAside-content{
+        .cart-aside-content{
             height: calc(100% - 100px);
             padding: 15px 0 45px;
             ul{
@@ -89,7 +89,7 @@
                     }
                 }
             }
-            .CartAside-content-price{
+            .cart-aside-content-price{
                 margin: auto 40px 0;
                 padding: 25px 0 0;
                 display: flex;
@@ -100,7 +100,7 @@
                 color: $black;
                 border-top: 1px solid #ddd;
             }
-            .CartAside-content-buttons{
+            .cart-aside-content-buttons{
                 padding: 0 40px;
                 display: flex;
                 width: 100%;

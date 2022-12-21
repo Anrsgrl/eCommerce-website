@@ -7,7 +7,7 @@
     opacity: 1 !important;
     visibility: visible !important;
 }
-.SearchModal-field{
+.search-modal-field{
     display: none;
     opacity: 0;
     visibility: hidden;
@@ -21,7 +21,7 @@
     @media(max-width:1024px){
         top: 0;
     }
-    .SearchModal-header{
+    .search-modal-header{
         justify-content: center;
         border: none;
         flex-direction: column-reverse;
@@ -81,7 +81,7 @@
             }
         }
     }
-    .SearchModal-bottom{
+    .search-modal-bottom{
         display: flex;
         max-width: 1410px;
         margin: 0 auto;
@@ -89,7 +89,7 @@
         @media(max-width:1024px){
             max-width: 98%;
         }
-        .SearchModal-bottom-content{
+        .search-modal-bottom-content{
             width: 100%;
             justify-content: center;
             display: flex;

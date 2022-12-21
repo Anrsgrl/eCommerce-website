@@ -2,12 +2,12 @@ import './header.scss';
 import { AiOutlineUser } from 'react-icons/ai';
 import { CgSearch, CgShoppingCart } from 'react-icons/cg';
 import { Link } from 'react-router-dom';
+import CartAside from '../CartAside/CartAside';
 import HeaderMenu from '../HeaderMenu/HeaderMenu';
 import React, { useState } from 'react';
 import SearchModal from '../SearchModal/SearchModal';
 import hamburger from '../../assets/images/hamburgerMenu.svg';
 import logo from '../../assets/images/WhiteLogo.svg';
-import CartAside from '../CartAside/CartAside';
 
 function Header() {
   //color
