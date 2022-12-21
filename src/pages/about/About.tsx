@@ -2,6 +2,7 @@ import '../about/about.scss';
 import Banner from '../../components/banner/Banner';
 import React from 'react';
 import Handcrafted from './components/Handcrafted/Handcrafted';
+
 export default function About() {
   return (
     <>
