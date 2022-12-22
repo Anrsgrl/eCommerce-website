@@ -32,7 +32,7 @@ export default function DailyEssentialsProductPart() {
             <div className="container">
               <div className="product-list">
                 <div className="product-item row d-flex justify-content-between align-items-center">
-                  {productCardState.products.map((product, index) => (
+                  {productCardState.products.slice(0, 8).map((product, index) => (
                     <div
                       className="col-6 col-sm-6 col-md-4  col-lg-3 col-xl-3 col-xxl-3 overflow-hidden"
                       key={index}
