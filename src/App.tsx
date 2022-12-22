@@ -14,6 +14,9 @@ import React from 'react';
 import Shop from './pages/shop/Shop';
 import TestPage from './pages/TestPage/TestPage';
 import Whishlist from './pages/wishlist/Whishlist';
+import Logout from './pages/MyAccount/Logout';
+import Register from './pages/MyAccount/Register';
+import Login from './pages/MyAccount/Login';
 
 function App() {
   return (
@@ -32,6 +35,9 @@ function App() {
           <Route path="/wishlist" element={<Whishlist />} />
           <Route path="/checkout" element={<CheckOut />} />
           <Route path="/my-account" element={<MyAccount />} />
+          <Route path="/logout" element={<Logout />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/login" element={<Login />} />
         </Routes>
       </main>
       <Footer />
