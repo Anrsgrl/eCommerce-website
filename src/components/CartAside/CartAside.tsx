@@ -47,7 +47,7 @@ export default function CartAside() {
           </div>
         </div>
       </div>
-      <div className="cart-aside-empty">
+      {/* <div className="cart-aside-empty">
         <div className="cart-empty-content">
           <div className="empty-aside-img">
             <img src={shoppingbag} alt="shoppingbag" />
@@ -59,7 +59,7 @@ export default function CartAside() {
             </button>
           </Link>
         </div>
-      </div>
+      </div> */}
     </aside>
   );
 }

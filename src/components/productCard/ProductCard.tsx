@@ -28,12 +28,13 @@ export default function ProductCard() {
                 className="col-6 col-sm-6 col-md-4  col-lg-3 col-xl-3 col-xxl-3 overflow-hidden"
                 key={index}
               >
-                <Link to={`product/${product.id}`}>
+                <div className="product-card">
                   <div className="Card">
-                    <div className="image">
-                      <img src={product.image} alt="" />
-                    </div>
-
+                    <Link to={`product/${product.id}`}>
+                      <div className="image">
+                        <img src={product.image} alt="" />
+                      </div>
+                    </Link>
                     <div className="cardContent">
                       <Link to={`product/${product.id}`}>
                         <p className="proName">{product.name}</p>
@@ -43,17 +44,17 @@ export default function ProductCard() {
                     </div>
                     <div className="buttonsGroup">
                       <button className="wishlish">
-                        <FiShoppingCart className="icon" />
+                        <FiHeart className="icon" />
                       </button>
                       <button className="addtocart">
-                        <FiHeart className="icon" />
+                        <FiShoppingCart className="icon" />
                       </button>
                       <button className="search">
                         <AiOutlineSearch className="icon" />
                       </button>
                     </div>
                   </div>
-                </Link>
+                </div>
               </div>
             ))}
           </div>
