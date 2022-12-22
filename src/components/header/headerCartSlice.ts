@@ -6,6 +6,7 @@ interface IinitialState {
     cartTotalQuantity: number;
     cartTotalAmount: number;
     cartQuantity: number;
+    emptyShop: boolean;
 }
 
 const initialState: IinitialState = {
@@ -16,6 +17,7 @@ const initialState: IinitialState = {
     cartTotalQuantity: 0,
     cartTotalAmount: 0,
     cartQuantity: 0,
+    emptyShop: true,
 };
 
 const cartSlice = createSlice({
