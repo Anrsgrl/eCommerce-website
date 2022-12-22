@@ -4,4 +4,6 @@ export interface IProduct {
   price: number;
   discountPrice?: number | null;
   image: string;
+  cartQuantity:number;
+
 }

@@ -3,6 +3,7 @@ import { AiOutlineSearch } from 'react-icons/ai';
 import { FiHeart, FiShoppingCart } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
 import { RootState } from '../../../../store/store';
+import { addToCart } from '../../../../components/header/headerCartSlice';
 import { baseUrl } from '../../../../contants';
 import { loadProducts } from '../../../../components/productCard/productCardSlice';
 import { useDispatch, useSelector } from 'react-redux';
@@ -12,10 +13,15 @@ export default function DailyEssentialsProductPart() {
   const productCardState = useSelector((state: RootState) => state.productCard);
   const dispatch = useDispatch();
 
+  const cartSlice = useSelector((state: RootState) => state.cartCounter);
+
   useEffect(() => {
     fetch(`${baseUrl}/product`)
       .then((response) => response.json())
-      .then((data) => dispatch(loadProducts({ products: data })));
+      .then((data) => {
+        dispatch(loadProducts({ products: data }));
+        localStorage.setItem('cartItems', JSON.stringify(data));
+      });
   }, []);
   return (
     <div className="daily-essentials-product-part-field">
@@ -32,6 +38,9 @@ export default function DailyEssentialsProductPart() {
             <div className="container">
               <div className="product-list">
                 <div className="product-item row d-flex justify-content-between align-items-center">
+                  <button  onClick={() => {
+                                  dispatch(addToCart(productCardState.products[0]));
+                                }} >test</button>
                   {productCardState.products.slice(0, 8).map((product, index) => (
                     <div
                       className="col-6 col-sm-6 col-md-4  col-lg-3 col-xl-3 col-xxl-3 overflow-hidden"
@@ -54,7 +63,12 @@ export default function DailyEssentialsProductPart() {
                               <FiShoppingCart className="icon" />
                             </button>
                             <button className="addtocart">
-                              <FiHeart className="icon" />
+                              <FiHeart
+                                className="icon"
+                                onClick={() => {
+                                  dispatch(addToCart(product));
+                                }}
+                              />
                             </button>
                             <button className="search">
                               <AiOutlineSearch className="icon" />

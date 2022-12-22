@@ -1,26 +1,89 @@
+import { IProduct } from '../../models/Product';
 import { createSlice } from '@reduxjs/toolkit';
-
-interface CartCounterState {
-    cartCount: number;
+interface IinitialState {
+    cartItems: IProduct[];
+    cartTotalQuantity: number;
+    cartTotalAmount: number;
+    cartQuantity: number;
 }
 
-const initialState: CartCounterState = {
-    cartCount: 0,
+const initialState: IinitialState = {
+    cartItems: localStorage.getItem('cartItems')
+        ? JSON.parse(localStorage.getItem('cartItems') as string)
+        : [],
+    cartTotalQuantity: 0,
+    cartTotalAmount: 0,
+    cartQuantity: 0,
 };
 
-export const CartCounterSlice = createSlice({
-    name: 'cartCounter',
-    initialState: initialState,
+const cartSlice = createSlice({
+    name: 'cart',
+    initialState,
     reducers: {
-        increase: (state) => {
-            state.cartCount += 1;
+        addToCart(state, action) {
+            const existingIndex = state.cartItems.findIndex((item) => item.id === action.payload.id);
+            if (existingIndex >= 0) {
+                state.cartItems[existingIndex] = {
+                    ...state.cartItems[existingIndex],
+                    cartQuantity: state.cartItems[existingIndex].cartQuantity + 1,
+                };
+            } else {
+                let tempProductItem = { ...action.payload, cartQuantity: 1 };
+                state.cartItems.push(tempProductItem);
+            }
+            localStorage.setItem('cartItems', JSON.stringify(state.cartItems));
         },
-        decrease: (state) => {
-            state.cartCount -= 1;
+        decreaseCart(state, action) {
+            const itemIndex = state.cartItems.findIndex((item) => item.id === action.payload.id);
+
+            if (state.cartItems[itemIndex].cartQuantity > 1) {
+                state.cartItems[itemIndex].cartQuantity -= 1;
+            } else if (state.cartItems[itemIndex].cartQuantity === 1) {
+                const nextCartItems = state.cartItems.filter((item) => item.id !== action.payload.id);
+
+                state.cartItems = nextCartItems;
+            }
+
+            localStorage.setItem('cartItems', JSON.stringify(state.cartItems));
+        },
+        removeFromCart(state, action) {
+            state.cartItems.map((cartItem) => {
+                if (cartItem.id === action.payload.id) {
+                    const nextCartItems = state.cartItems.filter((item) => item.id !== cartItem.id);
+
+                    state.cartItems = nextCartItems;
+                }
+                localStorage.setItem('cartItems', JSON.stringify(state.cartItems));
+                return state;
+            });
+        },
+        getTotals(state, action) {
+            let { total, quantity } = state.cartItems.reduce(
+                (cartTotal, cartItem) => {
+                    const { price, cartQuantity } = cartItem;
+                    const itemTotal = price * cartQuantity;
+
+                    cartTotal.total += itemTotal;
+                    cartTotal.quantity += cartQuantity;
+
+                    return cartTotal;
+                },
+                {
+                    total: 0,
+                    quantity: 0,
+                },
+            );
+            total = parseFloat(total.toFixed(2));
+            state.cartTotalQuantity = quantity;
+            state.cartTotalAmount = total;
+        },
+        clearCart(state) {
+            state.cartItems = [];
+            localStorage.setItem('cartItems', JSON.stringify(state.cartItems));
         },
     },
 });
 
-export const { increase, decrease } = CartCounterSlice.actions;
+export const { addToCart, decreaseCart, removeFromCart, getTotals, clearCart } = cartSlice.actions;
 
-export const cartCounterReducer = CartCounterSlice.reducer;
+export default cartSlice.reducer;

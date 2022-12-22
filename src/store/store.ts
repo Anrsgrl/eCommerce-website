@@ -1,15 +1,15 @@
 import { ProductCardReducer } from '../components/productCard/productCardSlice';
-import { cartCounterReducer } from '../components/header/headerCartSlice';
 import { configureStore } from '@reduxjs/toolkit';
 import { headerAsideReducer } from '../components/header/headerAsideSlice';
 import { testPageReducer } from '../pages/TestPage/testPageSlice';
+import cartSlice from '../components/header/headerCartSlice';
 
 export const store = configureStore({
     reducer: {
         testPage: testPageReducer,
         productCard: ProductCardReducer,
         asideOpener: headerAsideReducer,
-        cartCounter: cartCounterReducer,
+        cartCounter: cartSlice,
     }, //add reducers here
 });
 
