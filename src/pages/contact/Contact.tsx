@@ -1,31 +1,28 @@
 import React from 'react';
-
-import "./contact.scss";
-import logo from './logo.png';
+import Banner from '../../components/banner/Banner';
+import phone from './logo.png';
 import email from './email.png';
 import location from './location.png';
+import ContactItem from './components/ContactItem';
+import './contact.scss';
+import {Contactboxes} from './components/Contactbox';
 
-
-export default function Contact() {
-    return (
-        <div>
-            <div className='three-divs'>
-                <div className='contact-box'>
-                    <img src={logo} alt="phone" />
-                    <p className='phone'>Phone</p>
-                    <p className='call'>Call us: 0333 015 0000</p>
-                </div>
-                <div className='contact-box'>
-                    <img src={location} alt="location" />
-                    <p className='phone'>Live chat</p>
-                    <p className='call'>Click here to launch live chat</p>
-                </div>
-                <div className='contact-box'>
-                    <img src={email} alt="email" />
-                    <p className='phone'>Email</p>
-                    <p className='call'>Email us at: contact@familab.net</p>
-                </div>
-            </div>
-        </div>
-    );
+function Contact() {
+  return (
+    <div>
+      <Banner
+        title='Contact'
+        coverPhoto='https://casona.familab.net/wp-content/uploads/2021/08/blog-bgf.jpg'
+        pageName='Contact'
+        sliderExist={false} />
+      <div className='threedivs'>
+      <Contactboxes photo={phone} title='Phone' description='Call us: 0333 015 0000' />
+      <Contactboxes photo={location} title='Live chat' description='Click here to launch live chat' />
+      <Contactboxes photo={email} title='Email' description='Email us at: contact@familab.net' />
+      </div>
+      <ContactItem />
+    </div>
+  );
 }
+
+export default Contact;

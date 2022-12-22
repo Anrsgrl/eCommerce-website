@@ -41,3 +41,10 @@
     letter-spacing: 4px;
     margin-top: 0;
 }
+
+@mixin font($size, $family, $weight, $height) {
+    font-size: $size;
+    font-family: $family;
+    font-weight: $weight;
+    line-height: $height;
+}
