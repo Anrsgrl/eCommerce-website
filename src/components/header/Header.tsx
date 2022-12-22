@@ -1,23 +1,20 @@
 import './header.scss';
+import { AiOutlineUser } from 'react-icons/ai';
+import { CgSearch, CgShoppingCart } from 'react-icons/cg';
 import { Link } from 'react-router-dom';
+import { openCart, openHamburger, openSearch } from './headerAsideSlice';
+import { useDispatch } from 'react-redux';
+import CartAside from '../CartAside/CartAside';
 import HeaderMenu from '../HeaderMenu/HeaderMenu';
 import React, { useState } from 'react';
+import SearchModal from '../SearchModal/SearchModal';
 import hamburger from '../../assets/images/hamburgerMenu.svg';
-import icon1 from '../../assets/images/WhiteSearch.svg';
-import icon2 from '../../assets/images/WhiteAccount.svg';
-import icon3 from '../../assets/images/WhiteCart.svg';
 import logo from '../../assets/images/WhiteLogo.svg';
 
 function Header() {
   //color
+
   const [color, setColor] = useState(false);
-  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
-  const handleOpenDrawer = () => {
-    setIsDrawerOpen(true);
-  };
-  const handleCloseDrawer = () => {
-    setIsDrawerOpen(false);
-  };
   const changeColor = () => {
     if (window.scrollY >= 96) {
       setColor(true);
@@ -26,6 +23,14 @@ function Header() {
     }
   };
   window.addEventListener('scroll', changeColor);
+
+  //redux
+
+  const dispatch = useDispatch();
+
+  const openHamburgerAside = () => dispatch(openHamburger());
+  const openSearchAside = () => dispatch(openSearch());
+  const openCartAside = () => dispatch(openCart());
 
   //close clickoutside
 
@@ -47,8 +52,8 @@ function Header() {
       <header className={color ? 'scroll-bg mobile' : ' mobile'}>
         <div className="header-container">
           <div className="hamburger-menu">
-            <button className="hamburger-button" onClick={handleOpenDrawer}>
-              <img src={hamburger} alt="hamburger" className="formobileicon" />
+            <button className="header-button" onClick={openHamburgerAside}>
+              <img src={hamburger} alt="hamburger" className="hamburger-button" />
             </button>
           </div>
           <div className="logo-field">
@@ -57,7 +62,7 @@ function Header() {
                 <img
                   src={logo}
                   alt="Our logo"
-                  className={color ? 'scroll-fill logo-image img-responsive ' : 'logo-image img-responsive'}
+                  className={color ? 'scroll-fill logo-fill img-responsive ' : 'img-responsive'}
                 />
               </Link>
             </div>
@@ -114,21 +119,30 @@ function Header() {
             </ul>
           </div>
           <div className="header-icons">
-            <button className="icons-element icons-search search-btn formobileicon">
-              <img src={icon1} alt="Search" className={linkIconClassName} />
+            <button
+              className="Hicons-element icons-search search-btn formobileicon header-button"
+              onClick={openSearchAside}
+            >
+              <CgSearch className={linkIconClassName} />
             </button>
-            <button className="icons-element icons-account">
-              <Link to="/" className="account-btn">
-                <img src={icon2} alt="Account" className={linkIconClassName} />
+            <button className="Hicons-element icons-account header-button">
+              <Link to="/myAccount" className="account-btn">
+                <AiOutlineUser className={linkIconClassName} />
               </Link>
             </button>
-            <button className="icons-element icons-cart Cart-btn formobileicon">
-              <img src={icon3} alt="Cart" className={linkIconClassName} />
+            <button
+              className="Hicons-element icons-cart Cart-btn formobileicon header-button"
+              onClick={openCartAside}
+            >
+              <CgShoppingCart className={linkIconClassName} />
+              <span>0</span>
             </button>
           </div>
         </div>
       </header>
-      <HeaderMenu isOpen={isDrawerOpen} handleClose={handleCloseDrawer} />
+      <HeaderMenu />
+      <SearchModal />
+      <CartAside />
     </>
   );
 }

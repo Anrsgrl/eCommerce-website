@@ -7,7 +7,7 @@ import logo from '../../assets/images/WhiteLogo.svg';
 function Footer() {
   return (
     <footer>
-      <div className="footer-container">
+      <div className="footer-container container">
         <div className="footer-content">
           <div className="footer-element">
             <div className="footer-logo">

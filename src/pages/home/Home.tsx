@@ -1,18 +1,23 @@
 import './home.scss';
+import DailyEssentials from './components/DailyEssentials/DailyEssentials';
+import DailyEssentialsProductPart from './components/DailyEssentialsProductPart/DailyEssentialsProductPart';
+import Hanpicked from './components/Hanpicked/Hanpicked';
+import HomeServices from './components/HomeServices/HomeServices';
+import HomeSlider from './components/HomeSlider/HomeSlider';
+import HomeSubscribe from './components/HomeSubscribe/HomeSubscribe';
 import React from 'react';
+import SaleUp from './components/SaleUp/SaleUp';
 
 export default function Home() {
   return (
     <>
-      <div className="bg"></div>
-      <div className="bg"></div>
-      <div className="blank">
-        Home Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus dolor vel perspiciatis
-        commodi nemo sequi aspernatur, in omnis iste sed ratione ab maiores vero consequuntur earum amet
-        quisquam aperiam non?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error eum temporibus
-        nihil expedita, perspiciatis quam! Quisquam velit ipsum dicta similique saepe maiores sapiente nihil
-        laboriosam quibusdam, error alias, dignissimos culpa!Lorem
-      </div>
+      <HomeSlider />
+      <DailyEssentials />
+      <DailyEssentialsProductPart />
+      <SaleUp />
+      <Hanpicked />
+      <HomeServices />
+      <HomeSubscribe />
     </>
   );
 }

@@ -5,12 +5,17 @@
     background-color: white;
 }
 .scroll-fill{
+    path{
+        fill: $black !important;
+    }
+}
+.logo-fill{
     filter: invert(1);
 }
 .smth{
     display: none;
 }
-button{
+.header-button{
     @include buttonstyle;
 }
 header{
@@ -24,7 +29,6 @@ header{
     left: 0;
     top: 0;
     background-color: rgba(255,255,255,0);
-   
     .header-container{
         display: flex;
         align-items: center;
@@ -32,8 +36,10 @@ header{
         height: inherit;
         margin: 0 auto;
         max-width: 100%;
-        padding-left: 23px;
-        padding-right: 36px;
+        padding: 0 30px;
+        @media(max-width: 1024px){
+            padding: 0 10px;
+        }
         .hamburger-menu{
             display: none;
             width: 60px;
@@ -143,7 +149,7 @@ header{
                         padding: 5px 25px;
                         position: relative;
                             a{
-                            color: #979797;
+                            color: $light-gray;
                             font-weight: 400;
                             text-transform: none;
                             line-height: 1.4;
@@ -180,10 +186,37 @@ header{
             color: $white;
             display: flex;
             gap: 20px;
-            .icons-element{
-                width: 20px;
-                height: 20px;
+            .Hicons-element{
+                width: 25px;
+                height: 25px;
                 transition: all .3s;
+                svg{
+                    width: 100%;
+                    height: 100%;
+                    path{
+                        fill: white;
+                    }
+                }
+            }
+            .Cart-btn{
+                display: flex;
+                position: relative;
+                span{
+                    line-height: 0;
+                    color: #fff !important;
+                    font-size: 11px;
+                    font-weight: 500;
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 50%;
+                    background: #2dbbf0;
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    position: absolute;
+                    right: -10px;
+                    top: -7px;
+                }
             }
         }
     }
@@ -199,16 +232,20 @@ header{
         background-color: $white !important;
         position: relative;
     }
+    .Hicons-element{
+        path{
+            fill: $black !important; 
+        }
+    }
     .hamburger-menu{
         display: block !important;
+        .hamburger-button:hover{
+            filter: invert(69%) sepia(24%) saturate(4130%) hue-rotate(162deg) brightness(98%) contrast(91%);
+        }
     }
-    .scroll-fill{
-        filter: none;
-    }
-    .logo-field,
-    .header-icons{
-        filter: invert(1)
-    }
+    // .scroll-fill{
+    //     filter: none;
+    // }
     .header-navbar{
         display: none !important;
     }
@@ -217,12 +254,15 @@ header{
         align-items: center;
         margin-left: auto;
         margin-right: auto;
+        filter: invert(1);
     }
     .icons-account{
         display: none;
     }
     .formobileicon:hover{
-        filter: invert(69%) sepia(24%) saturate(4130%) hue-rotate(162deg) brightness(98%) contrast(91%);
+        path{
+            fill: $main-blue;
+        }
     }
 }
 @media( max-width: 767px){

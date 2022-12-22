@@ -4,10 +4,11 @@ import About from './pages/about/About';
 import Cart from './pages/cart/Cart';
 import CheckOut from './pages/checkout/CheckOut';
 import Contact from './pages/contact/Contact';
-import Footer from './components/Footer/Footer';
-import Header from './components/Header/Header';
+import Footer from './components/footer/Footer';
+import Header from './components/header/Header';
 import Home from './pages/home/Home';
-import OrderTracking from './pages/order/OrderTracking';
+import MyAccount from './pages/MyAccount/MyAccount';
+import OrderTracking from './pages/OrderTracking/OrderTracking';
 import Product from './pages/product/Product';
 import React from 'react';
 import Shop from './pages/shop/Shop';
@@ -30,6 +31,7 @@ function App() {
           <Route path="/orderTracking" element={<OrderTracking />} />
           <Route path="/wishlist" element={<Whishlist />} />
           <Route path="/checkout" element={<CheckOut />} />
+          <Route path="/my-account" element={<MyAccount />} />
         </Routes>
       </main>
       <Footer />
