@@ -43,11 +43,13 @@ export default function DailyEssentialsProductPart() {
                       className="col-6 col-sm-6 col-md-4  col-lg-3 col-xl-3 col-xxl-3 overflow-hidden"
                       key={index}
                     >
-                      <Link to={''}>
+                      <div>
                         <div className="Card">
-                          <div className="image">
-                            <img src={product.image} alt="" />
-                          </div>
+                          <Link to={`product/${product.id}`} >
+                            <div className="image">
+                              <img src={product.image} alt="" />
+                            </div>
+                          </Link>
                           <div className="cardContent">
                             <Link to={''}>
                               <p className="proName">{product.name}</p>
@@ -72,7 +74,7 @@ export default function DailyEssentialsProductPart() {
                             </button>
                           </div>
                         </div>
-                      </Link>
+                      </div>
                     </div>
                   ))}
                 </div>
