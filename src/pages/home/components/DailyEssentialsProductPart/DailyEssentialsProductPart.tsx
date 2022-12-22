@@ -51,7 +51,7 @@ export default function DailyEssentialsProductPart() {
                             </div>
                           </Link>
                           <div className="cardContent">
-                            <Link to={''}>
+                            <Link to={`product/${product.id}`}>
                               <p className="proName">{product.name}</p>
                             </Link>
                             {product.discountPrice && <span>{product.discountPrice}</span>}
