@@ -4,6 +4,13 @@ export interface IProduct {
   price: number;
   discountPrice?: number | null;
   image: string;
-  cartQuantity:number;
+}
 
+export interface ICartProduct {
+  id: number;
+  name: string;
+  price: number;
+  discountPrice?: number | null;
+  image: string;
+  cartQuantity: number;
 }

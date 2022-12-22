@@ -38,21 +38,18 @@ export default function DailyEssentialsProductPart() {
             <div className="container">
               <div className="product-list">
                 <div className="product-item row d-flex justify-content-between align-items-center">
-                  <button  onClick={() => {
-                                  dispatch(addToCart(productCardState.products[0]));
-                                }} >test</button>
                   {productCardState.products.slice(0, 8).map((product, index) => (
                     <div
                       className="col-6 col-sm-6 col-md-4  col-lg-3 col-xl-3 col-xxl-3 overflow-hidden"
                       key={index}
                     >
-                      <Link to={`product/${product.id}`}>
+                      <Link to={''}>
                         <div className="Card">
                           <div className="image">
                             <img src={product.image} alt="" />
                           </div>
                           <div className="cardContent">
-                            <Link to={`product/${product.id}`}>
+                            <Link to={''}>
                               <p className="proName">{product.name}</p>
                             </Link>
                             {product.discountPrice && <span>{product.discountPrice}</span>}
