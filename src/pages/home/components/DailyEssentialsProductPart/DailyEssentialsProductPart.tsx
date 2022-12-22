@@ -57,10 +57,10 @@ export default function DailyEssentialsProductPart() {
                           </div>
                           <div className="buttonsGroup">
                             <button className="wishlish">
-                              <FiShoppingCart className="icon" />
+                              <FiHeart className="icon" />
                             </button>
                             <button className="addtocart">
-                              <FiHeart
+                              <FiShoppingCart
                                 className="icon"
                                 onClick={() => {
                                   dispatch(addToCart(product));
