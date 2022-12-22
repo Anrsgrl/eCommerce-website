@@ -8,19 +8,19 @@ interface IProps {
     border: string;
   }
 
-  export default function AboutServicesItem(props: IProps) {
-    const { imgSrc, title, border } = props;
-    return (
-      <div className="Aservices-item" style={{ borderRight: `${border}`}}>
-        <div className="Aservices-item-container">
-          <div className="Aservices-item-img">
-            <img src={imgSrc} alt="Delivery"/>
-          </div>
-          <div className="Aservices-item-content">
-            <p>{title}</p>
-          </div>
+export default function AboutServicesItem(props: IProps) {
+  const { imgSrc, title, border } = props;
+  return (
+    <div className="Aservices-item" style={{ borderRight: `${border}`}}>
+      <div className="Aservices-item-container">
+        <div className="Aservices-item-img">
+          <img src={imgSrc} alt="Delivery"/>
+        </div>
+        <div className="Aservices-item-content">
+          <p>{title}</p>
         </div>
       </div>
-    );
-  }
+    </div>
+  );
+}
   

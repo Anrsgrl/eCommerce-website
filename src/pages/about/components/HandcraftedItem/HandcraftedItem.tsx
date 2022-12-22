@@ -1,6 +1,6 @@
-import React from 'react';
 import './HandcraftedItem.scss';
 import { Link } from 'react-router-dom';
+import React from 'react';
 
 interface IElement {
     imgSrc: string;

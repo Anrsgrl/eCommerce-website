@@ -1,5 +1,6 @@
 import './home.scss';
 import DailyEssentials from './components/DailyEssentials/DailyEssentials';
+import DailyEssentialsProductPart from './components/DailyEssentialsProductPart/DailyEssentialsProductPart';
 import Hanpicked from './components/Hanpicked/Hanpicked';
 import HomeServices from './components/HomeServices/HomeServices';
 import HomeSlider from './components/HomeSlider/HomeSlider';
@@ -12,6 +13,7 @@ export default function Home() {
     <>
       <HomeSlider />
       <DailyEssentials />
+      <DailyEssentialsProductPart />
       <SaleUp />
       <Hanpicked />
       <HomeServices />

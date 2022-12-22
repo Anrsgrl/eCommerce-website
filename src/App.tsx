@@ -8,7 +8,7 @@ import Footer from './components/footer/Footer';
 import Header from './components/header/Header';
 import Home from './pages/home/Home';
 import MyAccount from './pages/MyAccount/MyAccount';
-import OrderTracking from './pages/order/OrderTracking';
+import OrderTracking from './pages/OrderTracking/OrderTracking';
 import Product from './pages/product/Product';
 import React from 'react';
 import Shop from './pages/shop/Shop';
@@ -16,7 +16,6 @@ import TestPage from './pages/TestPage/TestPage';
 import Whishlist from './pages/wishlist/Whishlist';
 
 function App() {
-  const arr = [];
   return (
     <>
       <Header />

@@ -1,14 +1,14 @@
 import './Handcrafted.scss';
-import React from 'react';
-import HandcraftedItem from '../HandcraftedItem/HandcraftedItem';
 import { Link } from 'react-router-dom';
 import About1 from '../../../../assets/images/About1.jpg';
 import About2 from '../../../../assets/images/About2.jpg';
+import HandcraftedItem from '../HandcraftedItem/HandcraftedItem';
+import React from 'react';
 
 export default function Handcrafted() {
   return (
     <div className="Handcrafted-field">
-      <div className="Handcrafted-container">
+      <div className="Handcrafted-container"> 
         <div className="Handcrafted-content">
           <div className="Handcrafted-content-title"> 
             <div className="Handcrafted-content-text1">
@@ -37,4 +37,4 @@ export default function Handcrafted() {
       </div>
     </div>
   );
-};
+}
