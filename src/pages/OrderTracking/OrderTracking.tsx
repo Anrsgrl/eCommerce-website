@@ -1,15 +1,19 @@
 import './orderTracking.scss';
+import { RootState } from '../../store/store';
+import { checkErrors } from './orderTrackingSlice';
+import { useDispatch, useSelector } from 'react-redux';
 import Banner from '../../components/banner/Banner';
-import React, { useState } from 'react';
+import React from 'react';
 import bannerBg from '../../assets/images/bannerBg.jpg';
 
 export default function OrderTracking() {
-  const [errorMsg, setErrorMsg] = useState(false);
   let errorTitle: string =
     'Sorry, the order could not be found. Please contact us if you are having difficulty finding your order details.';
-  const checkError = () => {
-    setErrorMsg(true);
-  };
+
+  const orderTrackingError = useSelector((state: RootState) => state.orderTrackingError);
+  const dispatch = useDispatch();
+
+  const checkError = () => dispatch(checkErrors());
 
   return (
     <>
@@ -20,7 +24,9 @@ export default function OrderTracking() {
             <div className="order-tracking-content">
               <div
                 className={
-                  errorMsg ? 'order-tracking-content-error error-open' : 'order-tracking-content-error'
+                  orderTrackingError.errorMsg
+                    ? 'order-tracking-content-error error-open'
+                    : 'order-tracking-content-error'
                 }
               >
                 <p>{errorTitle}</p>

@@ -5,6 +5,7 @@ import { testPageReducer } from '../pages/TestPage/testPageSlice';
 import { userReducer } from '../pages/MyAccount/UserSlice';
 import cartSlice from '../components/header/headerCartSlice';
 import wishlistSlice from '../pages/wishlist/wishlistSlice';
+import { orderTrackingReducer } from '../pages/OrderTracking/orderTrackingSlice';
 
 export const store = configureStore({
     reducer: {
@@ -14,6 +15,7 @@ export const store = configureStore({
         cartCounter: cartSlice,
         wishlistHandler: wishlistSlice,
         user: userReducer, 
+        orderTrackingError: orderTrackingReducer,
     }, //add reducers here
 });
 

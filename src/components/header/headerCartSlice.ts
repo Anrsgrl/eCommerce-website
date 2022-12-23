@@ -6,7 +6,6 @@ interface IinitialState {
     cartTotalQuantity: number;
     cartTotalAmount: number;
     cartQuantity: number;
-    emptyShop: boolean;
 }
 
 const initialState: IinitialState = {
@@ -17,7 +16,6 @@ const initialState: IinitialState = {
     cartTotalQuantity: 0,
     cartTotalAmount: 0,
     cartQuantity: 0,
-    emptyShop: true,
 };
 
 const cartSlice = createSlice({
@@ -30,6 +28,8 @@ const cartSlice = createSlice({
                 state.currentCartItems[existingIndex] = {
                     ...state.currentCartItems[existingIndex],
                     cartQuantity: state.currentCartItems[existingIndex].cartQuantity + 1,
+                    cartTotalAmount: (state.currentCartItems[existingIndex].cartTotalAmount +=
+                        state.currentCartItems[existingIndex].price),
                 };
             } else {
                 let tempProductItem = { ...action.payload, cartQuantity: 1 };

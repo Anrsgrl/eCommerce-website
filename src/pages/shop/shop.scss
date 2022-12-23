@@ -372,6 +372,7 @@
             }
 
             .sort {
+                position: sticky;
                 .default-sorting {
                     display: flex;
                     justify-content: space-evenly;
