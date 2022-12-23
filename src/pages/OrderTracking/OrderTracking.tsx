@@ -1,15 +1,19 @@
 import './orderTracking.scss';
+import { RootState } from '../../store/store';
+import { checkErrors } from './orderTrackingSlice';
+import { useDispatch, useSelector } from 'react-redux';
 import Banner from '../../components/banner/Banner';
-import React, { useState } from 'react';
+import React from 'react';
 import bannerBg from '../../assets/images/bannerBg.jpg';
 
 export default function OrderTracking() {
-  const [errorMsg, setErrorMsg] = useState(false);
   let errorTitle: string =
     'Sorry, the order could not be found. Please contact us if you are having difficulty finding your order details.';
-  const checkError = () => {
-    setErrorMsg(true);
-  };
+
+  const orderTrackingError = useSelector((state: RootState) => state.orderTrackingError);
+  const dispatch = useDispatch();
+
+  const checkError = () => dispatch(checkErrors());
 
   return (
     <>
@@ -20,7 +24,9 @@ export default function OrderTracking() {
             <div className="order-tracking-content">
               <div
                 className={
-                  errorMsg ? 'order-tracking-content-error error-open' : 'order-tracking-content-error'
+                  orderTrackingError.errorMsg
+                    ? 'order-tracking-content-error error-open'
+                    : 'order-tracking-content-error'
                 }
               >
                 <p>{errorTitle}</p>
@@ -33,13 +39,24 @@ export default function OrderTracking() {
                 <p className="input-orderid">
                   <label>
                     <span>Order ID</span>
-                    <input type="text" name="orderid" required />
+                    <input
+                      type="text"
+                      name="orderid"
+                      placeholder="Found in your order confirmation email."
+                      required
+                    />
                   </label>
                 </p>
                 <p className="input-orderid">
                   <label>
                     <span>Billing email</span>
-                    <input type="email" name="orderid" id="emailInput" required />
+                    <input
+                      type="email"
+                      name="orderid"
+                      id="emailInput"
+                      placeholder="Email you used during checkout."
+                      required
+                    />
                   </label>
                 </p>
               </div>

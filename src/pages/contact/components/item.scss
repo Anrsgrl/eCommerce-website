@@ -1,28 +1,32 @@
 @import '../../../vendors/mixins';
 @import '../../../vendors/variables';
 
-input[type=text] {
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-  outline: none;
-  display: grid;
-  justify-content: center;
+.form-group{
+  input[type=text] {
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+    display: grid;
+    justify-content: center;
+    width: 100%;
+    
+    ::placeholder {
+      font-family: $main-fonta;
   
-  ::placeholder {
-    font-family: $main-fonta;
-
+    }
+  }
+  input[type=text]:focus {
+    border: 1px solid $main-blue;
   }
 }
 
-input[type=text]:focus {
-  border: 1px solid $main-blue;
-}
+
 
 
 .btn {

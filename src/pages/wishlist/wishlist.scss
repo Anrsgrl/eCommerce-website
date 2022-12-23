@@ -1,0 +1,58 @@
+@import '../../vendors/mixins';
+@import '../../vendors/variables';
+
+.wishlist-page-field{
+    width: 100%;
+    min-height: 50vh;
+    margin: 50px 0;
+    .table-field{
+        max-width: 1440px;
+        margin: 0 auto;
+        table{
+            width: 100%;
+            height: 10vh;
+            th{
+                border: 2px solid;
+                text-align: center;
+                font-family: $main-fonta;
+            }
+            #table-cart-button{
+                width: 287px;
+            }
+            td{
+                border: 2px solid;
+                width: 20%;
+                text-align: center;
+                padding: 1%;
+                font-family: $main-fonta;
+                img{
+                    width: 20%;
+                    height: 90%;
+                    object-fit: cover;
+                }
+                button{
+                    background: #a0a0a0;
+                    color: $white;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    letter-spacing: 1px;
+                    padding: 13px 20px;
+                    font-size: 0.75rem;
+                    line-height: 24px;
+                    background-color: $black;
+                    border: none;
+                    font-weight: 500;
+                    height: 55px;
+                    width: 100%;
+                    text-transform: uppercase;
+                    cursor: pointer;
+                    &:hover{
+                        background-color: $main-blue;
+                    }
+                }
+
+            }
+        }
+    }
+}

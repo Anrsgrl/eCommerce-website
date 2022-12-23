@@ -46,15 +46,16 @@
 
     .banner-text{
         position: absolute;
-        top: 40%;
+        top: 57%;
         left: 50%;
         transform: translate(-40%,-50%);
+        text-align: center;
         @include responsive(smallSize){
            top: 0%;
            left:-10%;
           }
         @include responsive(smartphone-potrait){
-            top: 35%;
+            top: 50%;
             left: 50%;
             transform: translate(-40%,-50%);
        }
@@ -62,12 +63,12 @@
             left: 50%;
         }
         @include responsive(smartphone-landscape){
-        top:25%;
+        top:50%;
         margin-top: 0;
          
         }
         @include responsive(tablet){
-            top:28%;
+            top:50%;
              
             }
         h3{

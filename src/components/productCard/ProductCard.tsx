@@ -8,6 +8,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import React, { useEffect } from 'react';
 
 import { AiOutlineSearch } from 'react-icons/ai';
+import { addToCart } from '../header/headerCartSlice';
 
 export default function ProductCard() {
   const productCardState = useSelector((state: RootState) => state.productCard);
@@ -47,7 +48,12 @@ export default function ProductCard() {
                         <FiHeart className="icon" />
                       </button>
                       <button className="addtocart">
-                        <FiShoppingCart className="icon" />
+                        <FiShoppingCart
+                          className="icon"
+                          onClick={() => {
+                            dispatch(addToCart(product));
+                          }}
+                        />
                       </button>
                       <button className="search">
                         <AiOutlineSearch className="icon" />

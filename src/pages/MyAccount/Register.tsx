@@ -1,14 +1,13 @@
 import './MyAccount.scss';
-import React from 'react';
-import { useForm } from 'react-hook-form';
-import { yupResolver } from '@hookform/resolvers/yup';
 import * as Yup from 'yup';
-import { useDispatch, useSelector } from 'react-redux';
-import { login } from "./UserSlice";
 import { RootState } from '../../store/store';
+import { login } from './UserSlice';
+import { useDispatch, useSelector } from 'react-redux';
+import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router';
+import { yupResolver } from '@hookform/resolvers/yup';
+import React from 'react';
 // import { Logout } from "./Logout";
-
 
 type UserSubmitForm = {
   fullname: string;
@@ -26,9 +25,7 @@ const useRegister: React.FC = () => {
       .required('This field is required.')
       .min(6, 'Username must be at least 6 characters')
       .max(20, 'Username must not exceed 20 characters'),
-    email: Yup.string()
-      .required('This field is required.')
-      .email('Please enter a valid email address.'),
+    email: Yup.string().required('This field is required.').email('Please enter a valid email address.'),
     password: Yup.string()
       .required('This field is required.')
       .min(6, 'Password must be at least 6 characters')
@@ -36,10 +33,10 @@ const useRegister: React.FC = () => {
     confirmPassword: Yup.string()
       .required('This field is required')
       .oneOf([Yup.ref('password'), null], 'Passwords do not match'),
-    acceptTerms: Yup.bool().oneOf([true], 'Accept Terms is required')
+    acceptTerms: Yup.bool().oneOf([true], 'Accept Terms is required'),
   });
 
-  const {username, fullname, email} = useSelector((state: RootState) => state.user);
+  const { username, fullname, email } = useSelector((state: RootState) => state.user);
   const navigate = useNavigate();
 
   console.log(username);
@@ -50,12 +47,12 @@ const useRegister: React.FC = () => {
     register,
     handleSubmit,
     reset,
-    formState: { errors }
+    formState: { errors },
   } = useForm<UserSubmitForm>({
-    resolver: yupResolver(validationSchema)
+    resolver: yupResolver(validationSchema),
   });
 
-const dispatch = useDispatch();
+  const dispatch = useDispatch();
 
   const onSubmit = (data: UserSubmitForm) => {
     dispatch(
@@ -65,29 +62,34 @@ const dispatch = useDispatch();
         email: data.email,
         password: data.password,
         isLoggedin: true,
-      })
-
-      );
-      const users = JSON.parse(localStorage.getItem("users") || JSON.stringify([]));
-      localStorage.setItem("users", JSON.stringify([...users, {
-        fullname: data.fullname,
-        username: data.username,
-        email: data.email,
-        password: data.password
-      }]));
+      }),
+    );
+    const users = JSON.parse(localStorage.getItem('users') || JSON.stringify([]));
+    localStorage.setItem(
+      'users',
+      JSON.stringify([
+        ...users,
+        {
+          fullname: data.fullname,
+          username: data.username,
+          email: data.email,
+          password: data.password,
+        },
+      ]),
+    );
 
     navigate('/logout');
   };
 
   return (
     <div className="register-form">
-
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="form-group">
           <h1>Register</h1>
+          <br />
 
           <input
-            placeholder='Full Name'
+            placeholder="Full Name"
             type="text"
             {...register('fullname')}
             className={`form-control ${errors.fullname ? 'is-invalid' : ''}`}
@@ -96,9 +98,8 @@ const dispatch = useDispatch();
         </div>
 
         <div className="form-group">
-
           <input
-            placeholder='Username'
+            placeholder="Username"
             type="text"
             {...register('username')}
             className={`form-control ${errors.username ? 'is-invalid' : ''}`}
@@ -107,9 +108,8 @@ const dispatch = useDispatch();
         </div>
 
         <div className="form-group">
-
           <input
-            placeholder='Email Address'
+            placeholder="Email Address"
             type="text"
             {...register('email')}
             className={`form-control ${errors.email ? 'is-invalid' : ''}`}
@@ -118,9 +118,8 @@ const dispatch = useDispatch();
         </div>
 
         <div className="form-group">
-
           <input
-            placeholder='Password'
+            placeholder="Password"
             type="password"
             {...register('password')}
             className={`form-control ${errors.password ? 'is-invalid' : ''}`}
@@ -128,39 +127,35 @@ const dispatch = useDispatch();
           <div className="invalid-feedback">{errors.password?.message}</div>
         </div>
         <div className="form-group">
-
           <input
-            placeholder='Confirm Password'
+            placeholder="Confirm Password"
             type="password"
             {...register('confirmPassword')}
-            className={`form-control ${errors.confirmPassword ? 'is-invalid' : ''
-              }`}
+            className={`form-control ${errors.confirmPassword ? 'is-invalid' : ''}`}
           />
-          <div className="invalid-feedback">
-            {errors.confirmPassword?.message}
-          </div>
+          <div className="invalid-feedback">{errors.confirmPassword?.message}</div>
         </div>
 
         <div className="form-group form-check">
           <input
             type="checkbox"
             {...register('acceptTerms')}
-            className={`form-check-input ${
-              errors.acceptTerms ? 'is-invalid' : ''
-            }`}
+            className={`form-check-input ${errors.acceptTerms ? 'is-invalid' : ''}`}
           />
           <label htmlFor="acceptTerms" className="form-check-label">
             I have read and agree to the Terms
-            <p className='privacy'>Your personal data will be used to support your experience throughout this website, to manage access to your account, and for other purposes described in our privacy policy.</p>
+            <p className="privacy">
+              Your personal data will be used to support your experience throughout this website, to manage
+              access to your account, and for other purposes described in our privacy policy.
+            </p>
           </label>
           <div className="invalid-feedback">{errors.acceptTerms?.message}</div>
         </div>
 
         <div className="form-group">
-          <button type="submit" className="btn " >
+          <button type="submit" className="btn ">
             REGISTER
           </button>
-          
         </div>
       </form>
     </div>
