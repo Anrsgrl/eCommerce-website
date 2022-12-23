@@ -39,13 +39,24 @@ export default function OrderTracking() {
                 <p className="input-orderid">
                   <label>
                     <span>Order ID</span>
-                    <input type="text" name="orderid" required />
+                    <input
+                      type="text"
+                      name="orderid"
+                      placeholder="Found in your order confirmation email."
+                      required
+                    />
                   </label>
                 </p>
                 <p className="input-orderid">
                   <label>
                     <span>Billing email</span>
-                    <input type="email" name="orderid" id="emailInput" required />
+                    <input
+                      type="email"
+                      name="orderid"
+                      id="emailInput"
+                      placeholder="Email you used during checkout."
+                      required
+                    />
                   </label>
                 </p>
               </div>
