@@ -7,16 +7,16 @@ import Contact from './pages/contact/Contact';
 import Footer from './components/footer/Footer';
 import Header from './components/header/Header';
 import Home from './pages/home/Home';
+import Login from './pages/MyAccount/Login';
+import Logout from './pages/MyAccount/Logout';
 import MyAccount from './pages/MyAccount/MyAccount';
 import OrderTracking from './pages/OrderTracking/OrderTracking';
 import Product from './pages/product/Product';
 import React from 'react';
+import Register from './pages/MyAccount/Register';
 import Shop from './pages/shop/Shop';
 import TestPage from './pages/TestPage/TestPage';
-import Whishlist from './pages/wishlist/Whishlist';
-import Logout from './pages/MyAccount/Logout';
-import Register from './pages/MyAccount/Register';
-import Login from './pages/MyAccount/Login';
+import Whishlist from './pages/wishlist/Wishlist';
 
 function App() {
   return (

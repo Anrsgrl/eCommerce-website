@@ -4,6 +4,7 @@ import { FiHeart, FiShoppingCart } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
 import { RootState } from '../../../../store/store';
 import { addToCart } from '../../../../components/header/headerCartSlice';
+import { addToWishlist } from '../../../wishlist/wishlistSlice';
 import { baseUrl } from '../../../../contants';
 import { loadProducts } from '../../../../components/productCard/productCardSlice';
 import { useDispatch, useSelector } from 'react-redux';
@@ -21,6 +22,7 @@ export default function DailyEssentialsProductPart() {
       .then((data) => {
         dispatch(loadProducts({ products: data }));
         localStorage.setItem('cartItems', JSON.stringify(data));
+        localStorage.setItem('wishlistItems', JSON.stringify(data));
       });
   }, []);
   return (
@@ -45,7 +47,7 @@ export default function DailyEssentialsProductPart() {
                     >
                       <div className="product-card">
                         <div className="Card">
-                          <Link to={`product/${product.id}`} >
+                          <Link to={`product/${product.id}`}>
                             <div className="image">
                               <img src={product.image} alt="" />
                             </div>
@@ -59,7 +61,13 @@ export default function DailyEssentialsProductPart() {
                           </div>
                           <div className="buttonsGroup">
                             <button className="wishlish">
-                              <FiHeart className="icon" />
+                              <FiHeart
+                                className="icon"
+                                onClick={() => {
+                                  dispatch(addToWishlist(product));
+                                  console.log(true);
+                                }}
+                              />
                             </button>
                             <button className="addtocart">
                               <FiShoppingCart

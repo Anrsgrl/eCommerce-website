@@ -126,7 +126,7 @@ function Header() {
               <CgSearch className={linkIconClassName} />
             </button>
             <button className="Hicons-element icons-account header-button">
-              <Link to="/myAccount" className="account-btn">
+              <Link to="/my-account" className="account-btn">
                 <AiOutlineUser className={linkIconClassName} />
               </Link>
             </button>

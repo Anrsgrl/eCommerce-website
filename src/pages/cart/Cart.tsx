@@ -26,7 +26,7 @@ export default function Cart() {
                     <img src={item.image} alt="itemImage" />
                   </td>
                   <td>{item.name}</td>
-                  <td>{item.price}</td>
+                  <td>${item.price}</td>
                   <td>{item.cartQuantity}</td>
                 </tr>
               </>

@@ -38,10 +38,10 @@ export default function CartAside() {
             </div>
             <div className="cart-aside-content-buttons">
               <Link to={'/checkout'}>
-                <button>Checkout</button>
+                <button onClick={closeCartAside}>Checkout</button>
               </Link>
               <Link to={'/cart'}>
-                <button>View Cart</button>
+                <button onClick={closeCartAside}>View Cart</button>
               </Link>
             </div>
           </div>
