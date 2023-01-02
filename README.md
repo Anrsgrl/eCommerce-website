@@ -8,7 +8,8 @@
 
 <ul>
   <li> Website template: <a href="https://casona.familab.net/?header_style=header_1"> Link </a>  </li>
-  <li> Project's trello: <a href="https://trello.com/b/E0MrwsyL/casona"> Link </a> </li>
+  <li> Website's trello: <a href="https://trello.com/b/E0MrwsyL/casona"> Link </a> </li>
+  <li> Website's backend (NestJS): <a href="https://github.com/Sakhinamammadzade/nestJs"> Link </a> </li>
   <li> Live site URL:  </li>
 </ul>
 
@@ -19,7 +20,6 @@
 <ul>
  <li>
     <a href="https://github.com/Anrsgrl"> Anar Asgarli </a>
-   <p> Made: </p>
    <ul>
      <li> Header (includes searchbar modal, hamburger aside and cart aside) </li>
      <li> Footer </li>
@@ -31,11 +31,24 @@
   </li>
   <li>
     <a href="https://github.com/Sakhinamammadzade"> Sakina M. </a>
+    <ul>
+     <li> Banner </li>
+     <li> Shop page </li>
+     <li> Backend of website </li>
+   </ul>
   </li>
   <li>
     <a href="https://github.com/gunellst"> Gunel St. </a>
+    <ul>
+     <li> Order Tracking </li>
+     <li> About </li>
+   </ul>
   </li>
   <li>
     <a href="https://github.com/mnargiz"> Nargiz M. </a>
+    <ul>
+     <li> My Account </li>
+     <li> Contact </li>
+   </ul>
   </li>
 </ul>
