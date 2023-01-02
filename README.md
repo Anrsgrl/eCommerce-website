@@ -2,6 +2,15 @@
 
 ###
 
+<h2 align="left"> Main goal: </h1>
+
+###
+
+<ul>
+  <li> Build a eccomerce website with React / Typescript </li>
+  <li> Working with team </li>
+</ul>
+
 <h2 align="left"> Overview: </h1>
 
 ###
