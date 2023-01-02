@@ -16,7 +16,7 @@
 ###
 
 <ul>
-  <li> Website template: <a href="https://casona.familab.net/?header_style=header_1"> Link </a>  </li>
+  <li> Website's template: <a href="https://casona.familab.net/?header_style=header_1"> Link </a>  </li>
   <li> Website's trello: <a href="https://trello.com/b/E0MrwsyL/casona"> Link </a> </li>
   <li> Website's backend (NestJS): <a href="https://github.com/Sakhinamammadzade/nestJs"> Link </a> </li>
 </ul>
