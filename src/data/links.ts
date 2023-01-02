@@ -36,5 +36,5 @@ let links=[
     name:'Soma'
   }
 
-]
+];
 export default links;
