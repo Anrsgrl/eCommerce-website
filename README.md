@@ -10,7 +10,6 @@
   <li> Website template: <a href="https://casona.familab.net/?header_style=header_1"> Link </a>  </li>
   <li> Website's trello: <a href="https://trello.com/b/E0MrwsyL/casona"> Link </a> </li>
   <li> Website's backend (NestJS): <a href="https://github.com/Sakhinamammadzade/nestJs"> Link </a> </li>
-  <li> Live site URL:  </li>
 </ul>
 
 <h2 align="left"> Contributors: </h1>
@@ -19,7 +18,7 @@
 
 <ul>
  <li>
-    <a href="https://github.com/Anrsgrl"> Anar Asgarli </a>
+    <a href="https://github.com/Anrsgrl"> Anar A. </a>
    <ul>
      <li> Header (includes searchbar modal, hamburger aside and cart aside) </li>
      <li> Footer </li>
