@@ -48,5 +48,5 @@ let colors=[
      name:'gray'
     }
   
-  ]
+  ];
   export default colors;
