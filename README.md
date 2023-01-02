@@ -2,7 +2,7 @@
 
 ###
 
-<h2 align="left"> Main goal: </h1>
+<h2 align="left"> Main goal: </h2>
 
 ###
 
@@ -11,7 +11,7 @@
   <li> Working with team </li>
 </ul>
 
-<h2 align="left"> Overview: </h1>
+<h2 align="left"> Overview: </h2>
 
 ###
 
@@ -21,7 +21,7 @@
   <li> Website's backend (NestJS): <a href="https://github.com/Sakhinamammadzade/nestJs"> Link </a> </li>
 </ul>
 
-<h2 align="left"> Contributors: </h1>
+<h2 align="left"> Contributors: </h2>
 
 ###
 
