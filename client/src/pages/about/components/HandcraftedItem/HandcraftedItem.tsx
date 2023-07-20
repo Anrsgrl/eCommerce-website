@@ -8,13 +8,13 @@ interface IElement {
     text: string;
     flexStyle: string;
 }
-export default function HandcraftedItem (props: IElement) {
+export default function HandcraftedItem(props: IElement) {
     const { imgSrc, title, text, flexStyle } = props;
     return (
         <div className="Handcrafted-card" style={{ justifyContent: `${flexStyle}` }}>
             <div className="Hcard-img">
                 <Link to={'/shop'}>
-                    <img src={imgSrc} alt="HcardImg"/>
+                    <img src={imgSrc} alt="HcardImg" />
                 </Link>
             </div>
             <div className="Handcrafted-card-content">
@@ -23,4 +23,4 @@ export default function HandcraftedItem (props: IElement) {
             </div>
         </div>
     );
-};
+}

@@ -1,19 +1,19 @@
-import { createSlice, configureStore, PayloadAction } from '@reduxjs/toolkit';
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 interface UserState {
-  fullname:string;
+  fullname: string;
   username: string;
   email: string;
-  password:string;
-  isLoggedin: boolean;
-};
+  password: string;
+  isLoggedin: boolean
+}
 
 const initialState: UserState = {
-  fullname:"",
+  fullname: "",
   username: "",
   email: "",
-  password:"",
-  isLoggedin: false,
+  password: "",
+  isLoggedin: false
 };
 
 
@@ -21,7 +21,7 @@ const userSlice = createSlice({
   name: 'user',
   initialState,
   reducers: {
-    login: (state, action: PayloadAction<UserState> )=> {
+    login: (state, action: PayloadAction<UserState>) => {
       state.fullname = action.payload.fullname;
       state.username = action.payload.username;
       state.email = action.payload.email;

@@ -79,6 +79,21 @@
     ]
   },
   "devDependencies": {
-    "eslint-plugin-prettier": "^5.0.0"
-  }
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "@typescript-eslint/eslint-plugin": "^6.1.0",
+    "@typescript-eslint/parser": "^6.1.0",
+    "eslint": "^8.0.0",
+    "eslint-plugin-import": "^2.24.0",
+    "eslint-plugin-jsx-a11y": "^7.3.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "eslint-plugin-sort-imports-es6-autofix": "^1.6.0",
+    "eslint-plugin-unused-imports": "^2.11.0",
+    "eslint-config-prettier": "^8.3.0",
+    "prettier": "^2.7.1"
+  },
+  "description": "<h1 align=\"center\"> E-commerce Website🛍️ </h1>",
+  "main": "index.js",
+  "author": "",
+  "license": "ISC"
 }

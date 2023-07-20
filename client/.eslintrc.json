@@ -1,13 +1,16 @@
 {
   "root": true,
   "parser": "@typescript-eslint/parser",
-  "plugins": ["react-hooks", "prettier", "eslint-plugin-sort-imports-es6-autofix", "unused-imports"],
+  "plugins": [
+    "react-hooks",
+    "eslint-plugin-sort-imports-es6-autofix",
+    "unused-imports"
+  ],
   "extends": [
     "react-app",
     "react-app/jest",
     "eslint:recommended",
     "plugin:react-hooks/recommended",
-    "plugin:prettier/recommended",
     "plugin:jsx-a11y/recommended"
   ],
   "env": {
@@ -33,11 +36,18 @@
     }
   },
   "rules": {
-    "semi": ["error", "always"],
-    "jsx-a11y/heading-has-content": [ 2, {
-      "components": [ "MyHeading" ]
-   }],
-    "prettier/prettier": "warn",
+    "semi": [
+      "error",
+      "always"
+    ],
+    "jsx-a11y/heading-has-content": [
+      2,
+      {
+        "components": [
+          "MyHeading"
+        ]
+      }
+    ],
     "no-duplicate-imports": [
       "error",
       {
@@ -50,14 +60,23 @@
       {
         "ignoreCase": false,
         "ignoreMemberSort": false,
-        "memberSyntaxSortOrder": ["none", "all", "multiple", "single"]
+        "memberSyntaxSortOrder": [
+          "none",
+          "all",
+          "multiple",
+          "single"
+        ]
       }
     ],
-
     "no-console": [
       "warn",
       {
-        "allow": ["warn", "error", "debug", "info"]
+        "allow": [
+          "warn",
+          "error",
+          "debug",
+          "info"
+        ]
       }
     ],
     "no-unreachable": "warn",
@@ -82,45 +101,75 @@
       "warn",
       {
         "selector": "default",
-        "format": ["camelCase"]
+        "format": [
+          "camelCase"
+        ]
       },
       {
         "selector": "variableLike",
         "leadingUnderscore": "allow",
-        "format": ["camelCase", "PascalCase"]
+        "format": [
+          "camelCase",
+          "PascalCase"
+        ]
       },
       {
         "selector": "memberLike",
-        "format": ["camelCase"]
+        "format": [
+          "camelCase"
+        ]
       },
       {
         "selector": "typeLike",
-        "format": ["PascalCase"]
+        "format": [
+          "PascalCase"
+        ]
       },
       {
         "selector": "enumMember",
-        "format": ["PascalCase", "UPPER_CASE"]
+        "format": [
+          "PascalCase",
+          "UPPER_CASE"
+        ]
       },
       {
         "selector": "variable",
         "leadingUnderscore": "allow",
-        "format": ["camelCase", "PascalCase"]
+        "format": [
+          "camelCase",
+          "PascalCase"
+        ]
       },
       {
         "selector": "variable",
-        "types": ["boolean", "array"],
-        "format": ["camelCase"]
+        "types": [
+          "boolean",
+          "array"
+        ],
+        "format": [
+          "camelCase"
+        ]
       },
       {
         "selector": "variable",
-        "types": ["string", "number"],
-        "format": ["camelCase", "UPPER_CASE"],
+        "types": [
+          "string",
+          "number"
+        ],
+        "format": [
+          "camelCase",
+          "UPPER_CASE"
+        ],
         "leadingUnderscore": "allow"
       },
       {
         "selector": "property",
         "leadingUnderscore": "allow",
-        "format": ["camelCase", "UPPER_CASE", "PascalCase"]
+        "format": [
+          "camelCase",
+          "UPPER_CASE",
+          "PascalCase"
+        ]
       },
       {
         "selector": "objectLiteralProperty",
@@ -130,14 +179,22 @@
       {
         "selector": "accessor",
         "leadingUnderscore": "allow",
-        "format": ["camelCase", "PascalCase"]
+        "format": [
+          "camelCase",
+          "PascalCase"
+        ]
       },
       {
         "selector": "function",
-        "format": ["camelCase", "PascalCase"]
+        "format": [
+          "camelCase",
+          "PascalCase"
+        ]
       }
     ],
-    "@typescript-eslint/explicit-member-accessibility": ["error"],
+    "@typescript-eslint/explicit-member-accessibility": [
+      "error"
+    ],
     "@typescript-eslint/no-inferrable-types": "off",
     "no-debugger": "warn"
   }
