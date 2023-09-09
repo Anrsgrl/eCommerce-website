@@ -1,62 +1,62 @@
-<h1 align="center"> E-commerce Website🛍️ </h1>
 
-###
+# E-commerce Website🛍️
 
-<h2 align="left"> Main goal: </h2>
+E-commerce website for DevEducation's final project
 
-###
 
-<ul>
-  <li> Build a eccomerce website with React / Typescript </li>
-  <li> Working with team </li>
-</ul>
+## Authors
 
-<h2 align="left"> Overview: </h2>
+- [@Anrsgrl](https://github.com/Anrsgrl)
+- [@Sakhinamammadzade](https://www.github.com/Sakhinamammadzade)
+- [@gunellst](https://www.github.com/gunellst)
+- [@mnargiz](https://www.github.com/mnargiz)
+- [@Negodyaj](https://www.github.com/Negodyaj)
 
-###
 
-<ul>
-  <li> Website's template: <a href="https://casona.familab.net/?header_style=header_1"> Link </a>  </li>
-  <li> Website's trello: <a href="https://trello.com/b/E0MrwsyL/casona"> Link </a> </li>
-  <li> Website's backend (NestJS): <a href="https://github.com/Sakhinamammadzade/nestJs"> Link </a> </li>
-</ul>
+## Tech Stack
 
-<h2 align="left"> Contributors: </h2>
+**Client:** React, Typescript, Redux toolkit, SASS/SCSS, Bootstrap, Framer-motion etc.
 
-###
+**Server:** NestJS
 
-<ul>
- <li>
-    <a href="https://github.com/Anrsgrl"> Anar A. </a>
-   <ul>
-     <li> Header (includes searchbar modal, hamburger aside and cart aside) </li>
-     <li> Footer </li>
-     <li> Home page (and it's all components) </li>
-     <li> Cart page </li>
-     <li> Wishlist page </li>
-     <li> Cart and Wishlist functions</li>
-   </ul>
-  </li>
-  <li>
-    <a href="https://github.com/Sakhinamammadzade"> Sakina M. </a>
-    <ul>
-     <li> Banner </li>
-     <li> Shop page </li>
-     <li> Backend of website </li>
-   </ul>
-  </li>
-  <li>
-    <a href="https://github.com/gunellst"> Gunel St. </a>
-    <ul>
-     <li> Order Tracking </li>
-     <li> About </li>
-   </ul>
-  </li>
-  <li>
-    <a href="https://github.com/mnargiz"> Nargiz M. </a>
-    <ul>
-     <li> My Account </li>
-     <li> Contact </li>
-   </ul>
-  </li>
-</ul>
+**Template:** [Link to template](https://casona.familab.net/?header_style=header_1)
+## Running Tests
+
+To run tests, run the following command
+
+```bash
+  npm run test
+```
+
+
+## Screenshots
+
+![App Screenshot](./client/public/casona-screenshot.png)
+
+
+## Run Locally
+
+Clone the project
+
+```bash
+  git clone https://github.com/Anrsgrl/eCommerce-website
+```
+
+Go to the project directory
+
+```bash
+  cd eCommerce-website
+```
+
+Install dependencies
+
+```bash
+  npm install
+```
+
+Start the server
+
+```bash
+  npm run start
+```
+
