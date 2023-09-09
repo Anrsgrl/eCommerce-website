@@ -6,11 +6,11 @@ E-commerce website for DevEducation's final project
 
 ## Authors
 
-- [@Anrsgrl](https://github.com/Anrsgrl)
-- [@Sakhinamammadzade](https://www.github.com/Sakhinamammadzade)
-- [@gunellst](https://www.github.com/gunellst)
-- [@mnargiz](https://www.github.com/mnargiz)
-- [@Negodyaj](https://www.github.com/Negodyaj)
+- [Anrsgrl](https://github.com/Anrsgrl)
+- [Sakhinamammadzade](https://www.github.com/Sakhinamammadzade)
+- [gunellst](https://www.github.com/gunellst)
+- [mnargiz](https://www.github.com/mnargiz)
+- [Negodyaj](https://www.github.com/Negodyaj)
 
 
 ## Screenshots
@@ -25,13 +25,6 @@ E-commerce website for DevEducation's final project
 **Server:** NestJS
 
 **Template:** [Link to template](https://casona.familab.net/?header_style=header_1)
-## Running Tests
-
-To run tests, run the following command
-
-```bash
-  npm run test
-```
 
 
 ## Run Locally
