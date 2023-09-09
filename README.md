@@ -13,6 +13,11 @@ E-commerce website for DevEducation's final project
 - [@Negodyaj](https://www.github.com/Negodyaj)
 
 
+## Screenshots
+
+![App Screenshot](./client/public/casona-screenshot.png)
+
+
 ## Tech Stack
 
 **Client:** React, Typescript, Redux toolkit, SASS/SCSS, Bootstrap, Framer-motion etc.
@@ -27,11 +32,6 @@ To run tests, run the following command
 ```bash
   npm run test
 ```
-
-
-## Screenshots
-
-![App Screenshot](./client/public/casona-screenshot.png)
 
 
 ## Run Locally
