@@ -33,7 +33,8 @@ E-commerce website for DevEducation's final project
 
 - **NestJS:** Managing server-side logic and creating APIs.
 
-**Template:** [Link to template](https://casona.familab.net/?header_style=header_1)
+**Template:** 
+- [Link to template](https://casona.familab.net/?header_style=header_1)
 
 
 ## Run Locally
