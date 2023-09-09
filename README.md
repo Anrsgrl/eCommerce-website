@@ -4,15 +4,6 @@
 E-commerce website for DevEducation's final project
 
 
-## Authors
-
-- [Anrsgrl](https://github.com/Anrsgrl)
-- [Sakhinamammadzade](https://www.github.com/Sakhinamammadzade)
-- [gunellst](https://www.github.com/gunellst)
-- [mnargiz](https://www.github.com/mnargiz)
-- [Negodyaj](https://www.github.com/Negodyaj)
-
-
 ## Screenshots
 
 ![App Screenshot](./client/public/casona-screenshot.png)
@@ -63,3 +54,10 @@ Start the server
   npm run start
 ```
 
+## Authors
+
+- [Anrsgrl](https://github.com/Anrsgrl)
+- [Sakhinamammadzade](https://www.github.com/Sakhinamammadzade)
+- [gunellst](https://www.github.com/gunellst)
+- [mnargiz](https://www.github.com/mnargiz)
+- [Negodyaj](https://www.github.com/Negodyaj)
