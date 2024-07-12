@@ -54,10 +54,8 @@ Start the server
   npm run start
 ```
 
-## Authors
+## Contributors
 
-- [Anrsgrl](https://github.com/Anrsgrl)
-- [Sakhinamammadzade](https://www.github.com/Sakhinamammadzade)
-- [gunellst](https://www.github.com/gunellst)
-- [mnargiz](https://www.github.com/mnargiz)
-- [Negodyaj](https://www.github.com/Negodyaj)
+<a href="https://github.com/Anrsgrl/eCommerce-website/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=Anrsgrl/eCommerce-website" />
+</a>
